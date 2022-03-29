@@ -13,5 +13,14 @@
     <author>Author</author>
     <guid>https://bao-wei.github.io/first_post/</guid>
     <description><![CDATA[123 ]]></description>
+</item><item>
+    <title>NO.4-Hugo一键推送</title>
+    <link>https://bao-wei.github.io/%E4%B8%80%E9%94%AE%E6%8E%A8%E9%80%81/</link>
+    <pubDate>Mon, 04 May 2020 00:00:00 &#43;0000</pubDate>
+    <author>Author</author>
+    <guid>https://bao-wei.github.io/%E4%B8%80%E9%94%AE%E6%8E%A8%E9%80%81/</guid>
+    <description><![CDATA[<div class="featured-image">
+                <img src="https://i.loli.net/2020/05/04/bjBG2AHDCgOu68Z.jpg" referrerpolicy="no-referrer">
+            </div><p>Pre：其实就是把之前一句一句运行的命令写成在一个记事本文件中，重命名这个记事本就可以了:rofl:</p>]]></description>
 </item></channel>
 </rss>
