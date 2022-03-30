@@ -1,15 +1,36 @@
 <rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
     <channel>
-        <title>All Posts - 我的全新 Hugo 网站</title>
+        <title>All Posts - Bao Wei | A Psychologyer</title>
         <link>https://bao-wei.github.io/posts/</link>
-        <description>All Posts | 我的全新 Hugo 网站</description>
+        <description>All Posts | Bao Wei | A Psychologyer</description>
         <generator>Hugo -- gohugo.io</generator><language>en</language><managingEditor>baoweibow@gmail.com (BaoWei)</managingEditor>
-            <webMaster>baoweibow@gmail.com (BaoWei)</webMaster><lastBuildDate>Tue, 29 Mar 2022 16:23:25 &#43;0800</lastBuildDate><atom:link href="https://bao-wei.github.io/posts/" rel="self" type="application/rss+xml" /><item>
-    <title>First_post</title>
-    <link>https://bao-wei.github.io/first_post/</link>
-    <pubDate>Tue, 29 Mar 2022 16:23:25 &#43;0800</pubDate>
+            <webMaster>baoweibow@gmail.com (BaoWei)</webMaster><lastBuildDate>Wed, 30 Mar 2022 18:19:17 &#43;0800</lastBuildDate><atom:link href="https://bao-wei.github.io/posts/" rel="self" type="application/rss+xml" /><item>
+    <title>The neural pattern of intuitive and analytical processes in the subliminal environment: N2 responses on the embedded Chinese character task</title>
+    <link>https://bao-wei.github.io/consciousness/</link>
+    <pubDate>Wed, 30 Mar 2022 00:00:00 &#43;0000</pubDate>
     <author>Author</author>
-    <guid>https://bao-wei.github.io/first_post/</guid>
-    <description><![CDATA[123 ]]></description>
+    <guid>https://bao-wei.github.io/consciousness/</guid>
+    <description><![CDATA[Wei Bao, Tingting Yu, Yunhong Wang, & Junlong Luo. (2022). Consciousness and cognition]]></description>
+</item><item>
+    <title>Is the Negative Bias in Self-appraisal of Late-adolescents with Mild Depression Derived from their Mother?</title>
+    <link>https://bao-wei.github.io/current/</link>
+    <pubDate>Wed, 30 Mar 2022 00:00:00 &#43;0000</pubDate>
+    <author>Author</author>
+    <guid>https://bao-wei.github.io/current/</guid>
+    <description><![CDATA[Wei Bao, Yunhong Wang, Xue Fu, Caizhen Yue & Junlong Luo. (2022). Current Psychology]]></description>
+</item><item>
+    <title>When old information is intermixed with new elements: An event-related potential study</title>
+    <link>https://bao-wei.github.io/biological/</link>
+    <pubDate>Wed, 30 Mar 2022 18:19:17 &#43;0800</pubDate>
+    <author>Author</author>
+    <guid>https://bao-wei.github.io/biological/</guid>
+    <description><![CDATA[Yunhong Wang, Wei Bao, & Junlong Luo. (2021). Biological Psychology]]></description>
+</item><item>
+    <title>Working memory content guides attention: The effects of working memory capacity and state anxiety</title>
+    <link>https://bao-wei.github.io/pacificrimpsychology/</link>
+    <pubDate>Wed, 30 Mar 2022 00:00:00 &#43;0000</pubDate>
+    <author>Author</author>
+    <guid>https://bao-wei.github.io/pacificrimpsychology/</guid>
+    <description><![CDATA[Yu Luo, Jiarong Zhou, Wei Bao, Jing Qiu, Jingqing Nian, & Yu Zhang. (2021). Journal of Pacific Rim Psychology]]></description>
 </item></channel>
 </rss>
