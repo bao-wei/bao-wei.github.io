@@ -11,6 +11,6 @@ Background According to Beck’s cognitive theory of depression, individuals wit
 
 ***Citation***
 
-**Wei Bao**, Tingting Yu, Yunhong Wang, & Junlong Luo:(far fa-regular fa-envelope):. (2022). The neural pattern of intuitive and analytical processes in the subliminal environment: N2 responses on the embedded Chinese character task. *Consciousness and cognition*, *97*, 103260. https://doi.org/10.1016/j.concog.2021.103260
+**Wei Bao**, Yunhong Wang*, Xue Fu, Caizhen Yue & Junlong Luo:(far fa-regular fa-envelope):. (2022). Is the Negative Bias in Self-appraisal of Late-adolescents with Mild Depression Derived from their Mother?. *Current Psychology*, https://doi.org/10.1007/s12144-022-02742-7
 
 
