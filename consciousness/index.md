@@ -11,4 +11,6 @@ Dual process theory proposes that there are two different types of human thinkin
 
 ***Citation***
 
-**Wei Bao**, Tingting Yu, Yunhong Wang, & Junlong Luo:(far fa-regular fa-envelope):. (2022). The neural pattern of intuitive and analytical processes in the subliminal environment: N2 responses on the embedded Chinese character task. *Consciousness and cognition*, *97*, 103260. https://doi.org/10.1016/j.concog.2021.103260
+**Wei Bao**, Tingting Yu[^*], Yunhong Wang, & Junlong Luo[:(far fa-regular fa-envelope):](https://www.researchgate.net/profile/Junlong-Luo). (2022). The neural pattern of intuitive and analytical processes in the subliminal environment: N2 responses on the embedded Chinese character task. *Consciousness and cognition*, *97*, 103260. https://doi.org/10.1016/j.concog.2021.103260
+
+[^*]:Equal contribution

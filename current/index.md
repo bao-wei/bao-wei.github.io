@@ -11,6 +11,6 @@ Background According to Beck’s cognitive theory of depression, individuals wit
 
 ***Citation***
 
-**Wei Bao**, Yunhong Wang*, Xue Fu, Caizhen Yue & Junlong Luo:(far fa-regular fa-envelope):. (2022). Is the Negative Bias in Self-appraisal of Late-adolescents with Mild Depression Derived from their Mother?. *Current Psychology*, https://doi.org/10.1007/s12144-022-02742-7
+**Wei Bao**, Yunhong Wang[^*], Xue Fu, Caizhen Yue:(far fa-regular fa-envelope): & Junlong Luo[:(far fa-regular fa-envelope):](https://www.researchgate.net/profile/Junlong-Luo). (2022). Is the Negative Bias in Self-appraisal of Late-adolescents with Mild Depression Derived from their Mother?. *Current Psychology*, https://doi.org/10.1007/s12144-022-02742-7
 
-
+[^*]: Equal contribution

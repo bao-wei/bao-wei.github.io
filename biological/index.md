@@ -11,4 +11,6 @@ Previous research has focused on the event-related potential of the old/new effe
 
 ***Citation***
 
-Yunhong Wang, **Wei Bao***, & Junlong Luo:(far fa-regular fa-envelope):. (2021). When old information is intermixed with new elements: An event-related potential study. *Biological Psychology*, *163*, 108132. https://doi.org/10.1016/j.biopsycho.2021.108132
+Yunhong Wang, **Wei Bao[^*]**, & Junlong Luo[:(far fa-regular fa-envelope):](https://www.researchgate.net/profile/Junlong-Luo). (2021). When old information is intermixed with new elements: An event-related potential study. *Biological Psychology*, *163*, 108132. https://doi.org/10.1016/j.biopsycho.2021.108132
+
+[^*]:Equal contribution
