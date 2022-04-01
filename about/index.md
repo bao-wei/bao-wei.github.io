@@ -55,8 +55,20 @@ Yu Luo, Jiarong Zhou, **Wei Bao**, Jing Qiu, Jingqing Nian, & Yu Zhang:(far fa-r
 
 <br>
 
-# :(fa fa-thin fa-wrench):Skill 
+# :(fa-solid fa-toolbox):Skills
+
+### Programming
+
+{{< image src="/imgs/python.png" height="20" >}} [Psychopy](https://www.psychopy.org/) {{< image src="/imgs/icons8-matlab.svg" height="20" >}} [Psychtoolbox](http://psychtoolbox.org/)
+
+### Data analysis
+
+{{< image src="/imgs/r.png" height="20" >}} [Bruce R package](https://www.rdocumentation.org/packages/bruceR/versions/0.8.5) {{< image src="/imgs/icons8-matlab.svg" height="20" >}} [EEGLAB](https://sccn.ucsd.edu/eeglab/index.php)/[ERPLAB](https://erpinfo.org/erplab)
+
+### Data visualization
+
+{{< image src="/imgs/originlab.png" height="20" >}} Originlab {{< image src="/imgs/illustrator.png" height="20" >}} AI {{< image src="/imgs/photoshop.png" height="20" >}} PS {{< image src="/imgs/r.png" height="20" >}} [ggplot2]^(learning)
+
+<br>
 
 
-
-{{< image src="/static/imgs/icons8-notion.gif" >}}
