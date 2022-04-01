@@ -55,6 +55,8 @@ Yu Luo, Jiarong Zhou, **Wei Bao**, Jing Qiu, Jingqing Nian, & Yu Zhang:(far fa-r
 
 <br>
 
+# :(fa fa-thin fa-wrench):Skill 
 
 
 
+{{< image src="/static/imgs/icons8-notion.gif" >}}
