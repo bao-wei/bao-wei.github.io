@@ -5,7 +5,7 @@
 
 ---
 
-{{< style "strong{color:#00b1ff;}" >}}
+{{< style "strong{color:#00b1ff}" >}}
 
 {{< image src="/imgs/I Am What I Am.jpg" alt="《I Am What I Am》" caption="[**《I Am What I Am》**](https://movie.douban.com/subject/35144311/?_dtcc=1)" width="600" height="300">}}
 
