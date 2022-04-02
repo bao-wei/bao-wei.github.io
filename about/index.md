@@ -71,4 +71,6 @@ Yu Luo, Jiarong Zhou, **Wei Bao**, Jing Qiu, Jingqing Nian, & Yu Zhang:(far fa-r
 
 <br>
 
+# [Hobby]({{< relref "recommendation" >}} "hobby")
+
 
