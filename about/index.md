@@ -71,6 +71,6 @@ Yu Luo, Jiarong Zhou, **Wei Bao**, Jing Qiu, Jingqing Nian, & Yu Zhang:(far fa-r
 
 <br>
 
-# [Hobby]({{< relref "recommendation" >}} "hobby")
+# Hobby
 
-
+{{< image src="/imgs/watchmovie.png" height="20" >}}[Watch movie]({{< relref "recommendation" >}} "Movie list")
