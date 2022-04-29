@@ -4,7 +4,7 @@
         <link>https://bao-wei.github.io/</link>
         <description>A PSYCHOLOGYER</description>
         <generator>Hugo -- gohugo.io</generator><language>en</language><managingEditor>baoweibow@gmail.com (BaoWei)</managingEditor>
-            <webMaster>baoweibow@gmail.com (BaoWei)</webMaster><lastBuildDate>Sat, 02 Apr 2022 20:46:45 &#43;0800</lastBuildDate>
+            <webMaster>baoweibow@gmail.com (BaoWei)</webMaster><lastBuildDate>Sun, 17 Apr 2022 16:41:55 &#43;0800</lastBuildDate>
             <atom:link href="https://bao-wei.github.io/index.xml" rel="self" type="application/rss+xml" />
         <item>
     <title>The neural pattern of intuitive and analytical processes in the subliminal environment: N2 responses on the embedded Chinese character task</title>
@@ -34,6 +34,13 @@
     <author>Author</author>
     <guid>https://bao-wei.github.io/pacificrimpsychology/</guid>
     <description><![CDATA[Yu Luo, Jiarong Zhou, Wei Bao, Jing Qiu, Jingqing Nian, & Yu Zhang. (2021). Journal of Pacific Rim Psychology]]></description>
+</item><item>
+    <title>Psychopy online experiment programming notes</title>
+    <link>https://bao-wei.github.io/programmingnotes/</link>
+    <pubDate>Sun, 17 Apr 2022 16:41:55 &#43;0800</pubDate>
+    <author>Author</author>
+    <guid>https://bao-wei.github.io/programmingnotes/</guid>
+    <description><![CDATA[练习返回code组间中代码 内容1：练习返回code组件中的代码 tip1：在网页运行的时候要关闭阻止广告插件、油猴脚本等插件，会导致程序运行不]]></description>
 </item><item>
     <title>Movie list</title>
     <link>https://bao-wei.github.io/movielist/</link>

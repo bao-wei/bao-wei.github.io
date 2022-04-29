@@ -35,7 +35,7 @@ My research focus is on reasoning and decision-making, especially Dual-process t
 
 **Wei Bao**, Yunhong Wang, Junlong Luo[:(far fa-regular fa-envelope):](https://www.researchgate.net/profile/Junlong-Luo). (2022). Women rely on “gut feeling”? The neural pattern of gender difference in non-mathematic intuition. *Personality and Individual Differences*. (under review) 
 
-**Wei Bao**, Yunhong Wang, Xin Xin, Haijiang Li, Junlong Luo[:(far fa-regular fa-envelope):](https://www.researchgate.net/profile/Junlong-Luo). (2022). What you want may not be what you bought: Consumer attitudes in the context of emerging mobile payments. (Submitting)
+**Wei Bao**, Yunhong Wang, Xin Xin, Haijiang Li, Junlong Luo[:(far fa-regular fa-envelope):](https://www.researchgate.net/profile/Junlong-Luo). (2022). What you want may not be what you bought: Consumer attitudes in the context of emerging mobile payments. *PsyCh Journal*. (under review)
 
 ## Peer-reviewed publications
 
