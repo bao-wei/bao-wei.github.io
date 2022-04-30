@@ -143,9 +143,11 @@ if ((practice_key_resp_stroop.corr === 0)) {
 
 {{< /admonition >}}
 
+</br>
+
 ---
 
-</br>
+
 
 **<font color=#55bde2>参考内容</font>**
 
