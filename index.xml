@@ -40,7 +40,7 @@
     <pubDate>Sun, 17 Apr 2022 16:41:55 &#43;0800</pubDate>
     <author>Author</author>
     <guid>https://bao-wei.github.io/programmingnotes/</guid>
-    <description><![CDATA[练习返回code组间中代码 内容1：练习返回code组件中的代码 tip1：在网页运行的时候要关闭阻止广告插件、油猴脚本等插件，会导致程序运行不]]></description>
+    <description><![CDATA[Tip 1: 达到正确率后通过练习 练习返回code组件代码设置 这一步只能单纯的实现，被试达到一定正确率后通过练习。按照上面链接中的设置，可以出现的效果]]></description>
 </item><item>
     <title>Movie list</title>
     <link>https://bao-wei.github.io/movielist/</link>

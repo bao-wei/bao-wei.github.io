@@ -6,7 +6,7 @@
         <meta name="robots" content="noodp" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
         <title>Psychopy online experiment programming notes - Bao Wei | A Psychologyer</title><meta name="Description" content="A PSYCHOLOGYER"><meta property="og:title" content="Psychopy online experiment programming notes" />
-<meta property="og:description" content="练习返回code组间中代码 内容1：练习返回code组件中的代码 tip1：在网页运行的时候要关闭阻止广告插件、油猴脚本等插件，会导致程序运行不" />
+<meta property="og:description" content="Tip 1: 达到正确率后通过练习 练习返回code组件代码设置 这一步只能单纯的实现，被试达到一定正确率后通过练习。按照上面链接中的设置，可以出现的效果" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://bao-wei.github.io/programmingnotes/" /><meta property="og:image" content="https://bao-wei.github.io/logo.jpg"/><meta property="article:section" content="posts" />
 <meta property="article:published_time" content="2022-04-17T16:41:55+08:00" />
@@ -16,7 +16,7 @@
 <meta name="twitter:image" content="https://bao-wei.github.io/logo.jpg"/>
 
 <meta name="twitter:title" content="Psychopy online experiment programming notes"/>
-<meta name="twitter:description" content="练习返回code组间中代码 内容1：练习返回code组件中的代码 tip1：在网页运行的时候要关闭阻止广告插件、油猴脚本等插件，会导致程序运行不"/>
+<meta name="twitter:description" content="Tip 1: 达到正确率后通过练习 练习返回code组件代码设置 这一步只能单纯的实现，被试达到一定正确率后通过练习。按照上面链接中的设置，可以出现的效果"/>
 <meta name="application-name" content="Bao Wei | A Psychologyer">
 <meta name="apple-mobile-web-app-title" content="Bao Wei | A Psychologyer"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
         <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
@@ -29,7 +29,7 @@
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https:\/\/bao-wei.github.io\/programmingnotes\/"
-        },"genre": "posts","wordcount":  1695 ,
+        },"genre": "posts","wordcount":  2674 ,
         "url": "https:\/\/bao-wei.github.io\/programmingnotes\/","datePublished": "2022-04-17T16:41:55+08:00","dateModified": "2022-04-30T15:30:45+08:00","publisher": {
             "@type": "Organization",
             "name": "Bao Wei"},"author": {
@@ -74,33 +74,28 @@
     <div id="search-dropdown-mobile"></div>
 </div>
 <main class="main">
-                <div class="container"><div class="toc" id="toc-auto">
-            <h2 class="toc-title">Contents</h2>
-            <div class="toc-content" id="toc-content-auto"></div>
-        </div><article class="page single"><h1 class="single-title animated flipInX">Psychopy online experiment programming notes</h1><div class="post-meta">
+                <div class="container"><article class="page single"><h1 class="single-title animated flipInX">Psychopy online experiment programming notes</h1><div class="post-meta">
             <div class="post-meta-line"><span class="post-author"><a href="/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>Bao Wei</a></span>&nbsp;<span class="post-category">included in <a href="/categories/blog/"><i class="far fa-folder fa-fw"></i>Blog</a></span></div>
-            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2022-04-17">2022-04-17</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;1695 words&nbsp;
-                <i class="far fa-clock fa-fw"></i>&nbsp;4 minutes&nbsp;</div>
-        </div><div class="details toc" id="toc-static"  kept="true">
-                <div class="details-summary toc-title">
-                    <span>Contents</span>
-                    <span><i class="details-icon fas fa-angle-right"></i></span>
-                </div>
-                <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents"></nav></div>
-            </div><div class="content" id="content"><p>练习返回code组间中代码</p>
-<p>内容1：练习返回code组件中的代码</p>
-<p>tip1：在网页运行的时候要关闭阻止广告插件、油猴脚本等插件，会导致程序运行不正确</p>
-<p>tip2：同步本地和线上程序时，如果直接同步不可用，可以搜索在线程序来同步（注意，同步要同步两次，同步一次可能不会生效）</p>
-<p>tip3：修改的每一个地方都要对照python和js的代码来修改，有的python代码不一定适用于js代码，所以要根据python的意思来修改js的代码，才能让网页端程序正常运行</p>
-<p>tip4：例如在反馈代码(程序中的<code>fb_code</code>组件)中，无反应在python中的表示为<code>None</code>，在js中的表示为<code>undefined</code>，这里为了本地端和网页端都能正常运行，就将代码模式设置为<code>both</code>，这样python代码和js代码就可以不一样，这样两端都可以正常运行程序</p>
-<p>tip5：每次修改完build界面的程序，都要生成一次js代码，然后保存js代码，这样build的修改才会在js代码里面生效，不然build界面的修改是不会自动同步到js代码里的！！！！！</p>
-<p>tip6：同步时要关闭电脑上的网络代理工具，不然会导致网络连接失败</p>
-<p>tip7：刺激呈现时间t=N(帧数)/60(刷新率)，最短时间是28.67ms（60hz的显示器两帧之间的时间约等于16.67ms，屏幕自上而下刷新一次大概12ms。源自：《实验编程：psychopy从入门到精通》第十二章第一节）</p>
-<p>tip8：从108试次里面随机抽取10试次进行练习，在trials循环层面的select rows位置填入代码：<code>$random(10)*108</code></p>
-<p>tip9：同步时，要关闭所有需要上传的文件，不然可能会因为文件被程序占用导致上传报错</p>
-<p>tip10：当仓库显示上传成功时（根据更新时间判断），如果piloting实验时发现修改没有生效，说明浏览器缓存没有更新，要么清除浏览器缓存的cookie以及历史记录（近一小时或最近的即可），要么换个浏览器piloting</p>
-<p>tip11：设置被试主动重复练习的按键，即达到正确率后仍然想再次练习。在计算练习正确率的routine部分的code中增加代码。</p>
-<p>begin routine部分：</p>
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2022-04-17">2022-04-17</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;2674 words&nbsp;
+                <i class="far fa-clock fa-fw"></i>&nbsp;6 minutes&nbsp;</div>
+        </div><div class="content" id="content"></br>
+<div class="details admonition tip">
+        <div class="details-summary admonition-title">
+            <i class="icon fas fa-lightbulb fa-fw"></i>Tip 1: 达到正确率后通过练习<i class="details-icon fas fa-angle-right fa-fw"></i>
+        </div>
+        <div class="details-content">
+            <div class="admonition-content"><p><a href="https://www.jianshu.com/p/9d562d34d5ec" target="_blank" rel="noopener noreffer">练习返回code组件代码设置</a></p>
+<p>这一步只能单纯的实现，被试达到一定正确率后通过练习。按照上面链接中的设置，可以出现的效果是：达到设定的正确率后，被试可以通过练习，但无法进行再次练习，只能进行正式实验。对于练习较少的实验，被试可能会没有完全掌握实验操作方式，且无法再次进行练习。这就需要添加达到正确率后，既可以选择<em>通过练习</em>，也可以选择<em>返回重新练习</em></p>
+</div>
+        </div>
+    </div>
+<div class="details admonition tip">
+        <div class="details-summary admonition-title">
+            <i class="icon fas fa-lightbulb fa-fw"></i>Tip 2: 达到正确率后选择通过/再次练习<i class="details-icon fas fa-angle-right fa-fw"></i>
+        </div>
+        <div class="details-content">
+            <div class="admonition-content"><p>设置被试主动重复练习的按键，即达到正确率后仍然想再次练习。在<strong><ruby>计算练习正确率code组件<rt>Tip 1 中的最后一个code组件</rt></ruby></strong>中的<code>begin routine</code>和<code>end routine</code>部分中增加代码。</p>
+<p><strong>begin routine部分</strong>：</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
@@ -111,7 +106,7 @@
 </span></span><span class="line"><span class="cl">    <span class="n">end_practice</span><span class="o">.</span><span class="n">setText</span><span class="p">(</span><span class="s2">&#34;练习结束</span><span class="se">\n</span><span class="s2">按[空格]键开始正式实验</span><span class="se">\n</span><span class="s2">按[B]键重新练习&#34;</span><span class="p">)</span>
 </span></span></code></pre></td></tr></table>
 </div>
-</div><p>end routine部分：</p>
+</div><p><strong>end routine部分</strong>：</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
@@ -128,19 +123,215 @@
 </span></span><span class="line"><span class="cl">    	<span class="n">practice_loop</span><span class="o">.</span><span class="n">finished</span> <span class="o">=</span> <span class="kc">False</span>
 </span></span></code></pre></td></tr></table>
 </div>
-</div><p>注意：因为在没有达到要求的正确率时，程序出现的指导语是：练习未通过，请按空格重新练习。通过练习时也是按空格进入正式实验，所以这里会存在一个问题：在end routine部分如果不加第一句限制正确率的条件代码，同时，如果被试没有达到要求的正确率（如这里设置的0.8，即80%），按空格键也会跳出练习的循环。</p>
-<p>tip12：所有数字不能以“数字形式储存文本”的形式在excel中，不然psychopy会把这个识别为数字，在excel中设置为“常规”格式即可，然后psychopy中用str()转换为字符即可(括号内为刺激名称)</p>
+</div><p><strong>注意</strong>：因为在没有达到要求的正确率时，程序出现的指导语是：练习未通过，请按空格重新练习。通过练习时也是按空格进入正式实验，所以这里会存在一个问题：在<strong>end routine</strong>部分如果不加第一句限制正确率的条件代码，同时，如果被试没有达到要求的正确率（如这里设置的0.8，即80%），按空格键也会跳出练习的循环。<code>if number_correct/(practice_trials.nTotal + 1) &gt;= 0.80</code>这句代码在<strong>end routine</strong>部分必须加上，不是多余的。</p>
+</div>
+        </div>
+    </div>
+<div class="details admonition tip">
+        <div class="details-summary admonition-title">
+            <i class="icon fas fa-lightbulb fa-fw"></i>Tip 3: 在线运行错误可能原因<i class="details-icon fas fa-angle-right fa-fw"></i>
+        </div>
+        <div class="details-content">
+            <div class="admonition-content">在网页运行的时候要关闭阻止广告插件、油猴脚本等插件，会导致程序运行不正确</div>
+        </div>
+    </div>
+<div class="details admonition tip">
+        <div class="details-summary admonition-title">
+            <i class="icon fas fa-lightbulb fa-fw"></i>Tip 4: PC端无法同步到网页端解决方法<i class="details-icon fas fa-angle-right fa-fw"></i>
+        </div>
+        <div class="details-content">
+            <div class="admonition-content"><p>同步本地和线上程序时，如果直接同步不可用，可以搜索在线程序来同步（<strong><font color=#55bde2>注意，同步要同步两次，同步一次可能不会生效</font></strong>）。方法如下：</p>
+<p>通过build界面<code>在线搜索</code>功能解决无法同步程序到网页端的方法：<a href="https://psychopy.org/online/sharingExperiments.html" target="_blank" rel="noopener noreffer"><a href="https://psychopy.org/online/sharingExperiments.html" target="_blank" rel="noopener noreffer">https://psychopy.org/online/sharingExperiments.html</a></a></p>
+</div>
+        </div>
+    </div>
+<div class="details admonition tip">
+        <div class="details-summary admonition-title">
+            <i class="icon fas fa-lightbulb fa-fw"></i>Tip 5: Python代码和Js代码都要检查<i class="details-icon fas fa-angle-right fa-fw"></i>
+        </div>
+        <div class="details-content">
+            <div class="admonition-content">如果本地端能运行，但网页端不能运行，说明生成的psychojs代码不对。修改的每一个地方都要对照python和js的代码来修改，有的python代码不一定适用于js代码，所以要根据python的意思来修改js的代码，才能让网页端程序正常运行，如 <strong><font color=#55bde2>Tip 6</font></strong> 中的例子。</div>
+        </div>
+    </div>
+<div class="details admonition tip">
+        <div class="details-summary admonition-title">
+            <i class="icon fas fa-lightbulb fa-fw"></i>Tip 6: 在练习中增加反馈<i class="details-icon fas fa-angle-right fa-fw"></i>
+        </div>
+        <div class="details-content">
+            <div class="admonition-content"><p><strong>方法</strong>：单个trial的组件一般放在同一个routine中(如图中<code>practice_stroop</code>)，反馈就单独新建一个routine放在trial routine后，即被试按键后判断后(如图中<code>feedback_stroop</code>)。在<code>feedback_stroop</code>中有两个组件，首先是<code>code_3</code>组件，用于判断正确错误，然后是text文字组件<code>fb_2</code>，用于呈现反馈的文字，文字组件中的内容部分输入<code>$fb_text</code>，这样<code>code_3</code>组件生成的反馈内容就在文字组件中呈现。如下图：</p>
+<a class="lightgallery" href="/imgs/tip6_routine.png" title="Tip 6" data-thumbnail="/imgs/tip6_routine.png">
+        <img
+            class="lazyload"
+            src="/svg/loading.min.svg"
+            data-src="/imgs/tip6_routine.png"
+            data-srcset="/imgs/tip6_routine.png, /imgs/tip6_routine.png 1.5x, /imgs/tip6_routine.png 2x"
+            data-sizes="auto"
+            alt="Tip 6" height="300" width="600" />
+    </a>
+<p>在这个<code>feedback_stroop</code>Routine中增加一个<code>code_3</code>组件(名称随意)，将组件的<strong><ruby>语言方式设置为both<rt>默认是Auto-&gt;js</rt></ruby></strong>，在其中的<strong>begin routine</strong>部分增加如下代码：</p>
+<p><strong>左侧的python窗口输入</strong>：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="k">if</span> <span class="n">practice_key_resp_stroop</span><span class="o">.</span><span class="n">corr</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">    <span class="n">fb_text</span> <span class="o">=</span> <span class="s1">&#39;✔&#39;</span>
+</span></span><span class="line"><span class="cl">    <span class="n">fb_col</span> <span class="o">=</span> <span class="s1">&#39;green&#39;</span>
+</span></span><span class="line"><span class="cl"><span class="k">if</span> <span class="n">practice_key_resp_stroop</span><span class="o">.</span><span class="n">corr</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">    <span class="k">if</span> <span class="n">practice_key_resp_stroop</span><span class="o">.</span><span class="n">keys</span> <span class="o">==</span> <span class="kc">None</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">        <span class="n">fb_text</span> <span class="o">=</span> <span class="s1">&#39;未反应&#39;</span>
+</span></span><span class="line"><span class="cl">        <span class="n">fb_col</span> <span class="o">=</span> <span class="s1">&#39;white&#39;</span>
+</span></span><span class="line"><span class="cl">    <span class="k">else</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">        <span class="n">fb_text</span> <span class="o">=</span> <span class="s1">&#39;❌&#39;</span>
+</span></span><span class="line"><span class="cl">        <span class="n">fb_col</span> <span class="o">=</span> <span class="s1">&#39;red&#39;</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p><strong>右侧的js窗口输入</strong>：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl"><span class="k">if</span> <span class="p">((</span><span class="nx">practice_key_resp_stroop</span><span class="p">.</span><span class="nx">corr</span> <span class="o">===</span> <span class="mi">1</span><span class="p">))</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">fb_text</span> <span class="o">=</span> <span class="s2">&#34;\u2714&#34;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">fb_col</span> <span class="o">=</span> <span class="s2">&#34;green&#34;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="k">if</span> <span class="p">((</span><span class="nx">practice_key_resp_stroop</span><span class="p">.</span><span class="nx">corr</span> <span class="o">===</span> <span class="mi">0</span><span class="p">))</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="k">if</span> <span class="p">((</span><span class="nx">practice_key_resp_stroop</span><span class="p">.</span><span class="nx">keys</span> <span class="o">===</span> <span class="kc">undefined</span><span class="p">))</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="nx">fb_text</span> <span class="o">=</span> <span class="s2">&#34;\u672a\u53cd\u5e94&#34;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">        <span class="nx">fb_col</span> <span class="o">=</span> <span class="s2">&#34;white&#34;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="nx">fb_text</span> <span class="o">=</span> <span class="s2">&#34;\u274c&#34;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">        <span class="nx">fb_col</span> <span class="o">=</span> <span class="s2">&#34;red&#34;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>两部分代码唯一的区别在于：无反应在python中的表示为<code>None</code>，在js中的表示为<code>undefined</code>，这里为了本地端和网页端都能正常运行，就将代码模式设置为<code>both</code>，这样python代码和js代码就可以不一样，这样两端都可以正常运行程序。</p>
+</div>
+        </div>
+    </div>
+<div class="details admonition tip">
+        <div class="details-summary admonition-title">
+            <i class="icon fas fa-lightbulb fa-fw"></i>Tip 7: 同步前要先生成js代码<i class="details-icon fas fa-angle-right fa-fw"></i>
+        </div>
+        <div class="details-content">
+            <div class="admonition-content">每次修改完build界面的程序，在同步到网页端前，<strong><font color=#55bde2>都要生成一次js代码，然后保存js代码</font></strong>，这样build的修改才会在js代码里面生效，不然build界面的修改是不会自动同步到js代码里的！！！！！</div>
+        </div>
+    </div>
+<div class="details admonition tip">
+        <div class="details-summary admonition-title">
+            <i class="icon fas fa-lightbulb fa-fw"></i>Tip 8: 同步前要关闭网络代理<i class="details-icon fas fa-angle-right fa-fw"></i>
+        </div>
+        <div class="details-content">
+            <div class="admonition-content">同步时要关闭电脑上的网络代理工具，不然会导致网络连接失败</div>
+        </div>
+    </div>
+<div class="details admonition tip">
+        <div class="details-summary admonition-title">
+            <i class="icon fas fa-lightbulb fa-fw"></i>Tip 9: 屏幕刷新率和刺激呈现时间<i class="details-icon fas fa-angle-right fa-fw"></i>
+        </div>
+        <div class="details-content">
+            <div class="admonition-content">刺激呈现时间t=<sup>N(帧数)</sup>/<sub>60Hz(刷新率)</sub>，最短时间是28.67ms（60hz的显示器两帧之间的时间约等于16.67ms，屏幕自上而下刷新一次大概12ms（源自：《实验编程：psychopy从入门到精通》第十二章第一节）</div>
+        </div>
+    </div>
+<div class="details admonition tip">
+        <div class="details-summary admonition-title">
+            <i class="icon fas fa-lightbulb fa-fw"></i>Tip 10: 从正式试次中随机选取10试次练习<i class="details-icon fas fa-angle-right fa-fw"></i>
+        </div>
+        <div class="details-content">
+            <div class="admonition-content">例如：从108试次里面随机抽取10试次进行练习，在trials循环层面的<code>select rows</code>位置填入代码：<code>$random(10)*108</code>，然后condition文件选择正式实验的excel文件即可。(不推荐这个方法，建议另外创建练习的condition表格文件，尽量把每个条件都选1到2个试次进行练习，这样更平衡。)</div>
+        </div>
+    </div>
+<div class="details admonition tip">
+        <div class="details-summary admonition-title">
+            <i class="icon fas fa-lightbulb fa-fw"></i>Tip 11: 同步时可能出现的问题<i class="details-icon fas fa-angle-right fa-fw"></i>
+        </div>
+        <div class="details-content">
+            <div class="admonition-content">同步时，要关闭所有需要上传的文件，不然可能会因为文件被程序占用导致上传报错</div>
+        </div>
+    </div>
+<div class="details admonition tip">
+        <div class="details-summary admonition-title">
+            <i class="icon fas fa-lightbulb fa-fw"></i>Tip 12: 网页端的修改没有生效<i class="details-icon fas fa-angle-right fa-fw"></i>
+        </div>
+        <div class="details-content">
+            <div class="admonition-content">当仓库显示上传成功时（根据更新时间判断），如果在网页端的控制台piloting实验时发现修改没有生效，说明浏览器缓存没有更新，要么清除浏览器缓存的cookie以及历史记录（近一小时或最近的即可），要么换个浏览器piloting</div>
+        </div>
+    </div>
+<div class="details admonition tip">
+        <div class="details-summary admonition-title">
+            <i class="icon fas fa-lightbulb fa-fw"></i>Tip 13: 数字格式的刺激呈现问题<i class="details-icon fas fa-angle-right fa-fw"></i>
+        </div>
+        <div class="details-content">
+            <div class="admonition-content">所有数字不能是“<strong>以数字形式储存文本</strong>”的形式在excel表格中，不然psychopy会把这个识别为数字，在excel中设置为“常规”格式即可，然后psychopy中用<code>str()</code>转换为字符即可(括号内为刺激条件名称)</div>
+        </div>
+    </div>
 <hr>
-<p>代码仓库地址：https://gitlab.pavlovia.org/</p>
-<p>在线程序地址：https://pavlovia.org/#main</p>
-<p>网页端已经支持组件列表：https://psychopy.org/online/status.html</p>
-<p>python代码和js代码转换文档：https://discourse.psychopy.org/t/psychopy-python-to-javascript-crib-sheet/14601</p>
+</br>
+<p><strong><font color=#55bde2>参考内容</font></strong></p>
+<ul>
+<li>
+<p>代码仓库地址：<a href="https://gitlab.pavlovia.org/" target="_blank" rel="noopener noreffer">https://gitlab.pavlovia.org/</a></p>
+</li>
+<li>
+<p>在线程序地址：<a href="https://pavlovia.org/#main" target="_blank" rel="noopener noreffer">https://pavlovia.org/#main</a></p>
+</li>
+<li>
+<p>网页端已经支持组件列表：<a href="https://psychopy.org/online/status.html" target="_blank" rel="noopener noreffer">https://psychopy.org/online/status.html</a></p>
+</li>
+<li>
+<p>python代码和js代码转换文档：<a href="https://discourse.psychopy.org/t/psychopy-python-to-javascript-crib-sheet/14601" target="_blank" rel="noopener noreffer">https://discourse.psychopy.org/t/psychopy-python-to-javascript-crib-sheet/14601</a></p>
+</li>
+<li>
 <p>网页端运行时产生“Unknown Resource” issue报错的原因：</p>
-<p><a href="https://discourse.psychopy.org/t/unknown-resource-online-but-works-fine-offline/25793/10" target="_blank" rel="noopener noreffer">https://discourse.psychopy.org/t/unknown-resource-online-but-works-fine-offline/25793/10</a></p>
-<p><a href="https://psychopy.org/online/configureOnline.html" target="_blank" rel="noopener noreffer">https://psychopy.org/online/configureOnline.html</a></p>
-<p><a href="https://psychopy.org/online/index.html" target="_blank" rel="noopener noreffer">https://psychopy.org/online/index.html</a></p>
+<ul>
+<li>
+<a href="https://discourse.psychopy.org/t/unknown-resource-online-but-works-fine-offline/25793/10" target="_blank" rel="noopener noreffer">https://discourse.psychopy.org/t/unknown-resource-online-but-works-fine-offline/25793/10</a>
+</li>
+<li>
+<a href="https://psychopy.org/online/configureOnline.html" target="_blank" rel="noopener noreffer">https://psychopy.org/online/configureOnline.html</a>
+</li>
+<li>
+<a href="https://psychopy.org/online/index.html" target="_blank" rel="noopener noreffer">https://psychopy.org/online/index.html</a>
+</li>
+</ul>
+</li>
+<li>
 <p>如果在本地增加了新的文件夹存放图片或excel条件文件，要提前在build界面的设置中，online选项卡下添加这些resources，不然加载图片或条件会报错，提示无法加载相应的材料</p>
-<p>通过build界面<code>在线搜索</code>功能解决无法同步程序到网页端的方法（对应tip2）：https://psychopy.org/online/sharingExperiments.html</p>
+<a class="lightgallery" href="/imgs/online_files.png" title="online_files" data-thumbnail="/imgs/online_files.png">
+        <img
+            class="lazyload"
+            src="/svg/loading.min.svg"
+            data-src="/imgs/online_files.png"
+            data-srcset="/imgs/online_files.png, /imgs/online_files.png 1.5x, /imgs/online_files.png 2x"
+            data-sizes="auto"
+            alt="online_files" height="300" width="600" />
+    </a>
+</li>
+</ul>
 </div><div class="post-footer" id="post-footer">
     <div class="post-info">
         <div class="post-info-line">
