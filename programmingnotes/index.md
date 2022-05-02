@@ -170,7 +170,7 @@ if ((practice_key_resp_stroop.corr === 0)) {
 
 {{< /admonition >}}
 
-{{< admonition type=tip title="Tip 14: ⭐本地端和网页端加载资源方式" open=false >}}
+{{< admonition type=tip title="Tip 15: ⭐本地端和网页端加载资源方式" open=false >}}
 
 如果在本地增加了新的文件夹存放图片或excel条件文件，要提前在**build界面**的**全局设置**中，**online选项卡**下添加这些resources，不然加载图片或条件会报错，提示无法加载相应的材料(如下图)
 
@@ -194,7 +194,7 @@ if ((practice_key_resp_stroop.corr === 0)) {
 - 网页端运行时产生“Unknown Resource” issue报错的原因： 
 
   - {{< link "https://discourse.psychopy.org/t/unknown-resource-online-but-works-fine-offline/25793/10" >}}
-- {{< link "https://psychopy.org/online/configureOnline.html" >}}
+  - {{< link "https://psychopy.org/online/configureOnline.html" >}}
   - {{< link "https://psychopy.org/online/index.html" >}}
 
 
