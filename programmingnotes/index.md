@@ -155,7 +155,7 @@ if ((practice_key_resp_stroop.corr === 0)) {
 
 - 用`height`为单位，默认字体大小为`0.05`，如果高度为1的话就是全屏高度，即像素的`1080pix`，那`0.05`就是`5%`。
 
-- 所以默认的$0.05height \approx 1080pix \times 5$ % $= 54pix $，这根据视角计算工具得出大约为不到**1.1度**视角
+- 所以默认的$0.05height \approx 1080pix \times 5$ % $= 54pix $，这根据[视角计算工具]^(文末有网址)得出大约为不到**1.1度**视角
 
 - 根据视角计算器，`3°`视角大约为`151pix`.
 
@@ -170,6 +170,14 @@ if ((practice_key_resp_stroop.corr === 0)) {
 
 {{< /admonition >}}
 
+{{< admonition type=tip title="Tip 14: ⭐本地端和网页端加载资源方式" open=false >}}
+
+如果在本地增加了新的文件夹存放图片或excel条件文件，要提前在**build界面**的**全局设置**中，**online选项卡**下添加这些resources，不然加载图片或条件会报错，提示无法加载相应的材料(如下图)
+
+{{< image src="/imgs/online_files.png" alt="online_files" width="600" height="300">}}
+
+{{< /admonition >}}
+
 </br>
 
 ---
@@ -179,25 +187,21 @@ if ((practice_key_resp_stroop.corr === 0)) {
 **<font color=#55bde2>参考内容</font>**
 
 - 代码仓库地址：{{< link "https://gitlab.pavlovia.org/" >}}
-
 - 在线程序地址：{{< link "https://pavlovia.org/#main" >}}
-
 - 视角计算工具网站：{{< link "https://www.sr-research.com/visual-angle-calculator/" >}}
-
 - 网页端已经支持组件列表：{{< link "https://psychopy.org/online/status.html" >}}
-
 - python代码和js代码转换文档：{{< link "https://discourse.psychopy.org/t/psychopy-python-to-javascript-crib-sheet/14601" >}}
-
 - 网页端运行时产生“Unknown Resource” issue报错的原因： 
 
   - {{< link "https://discourse.psychopy.org/t/unknown-resource-online-but-works-fine-offline/25793/10" >}}
-
-  - {{< link "https://psychopy.org/online/configureOnline.html" >}}
+- {{< link "https://psychopy.org/online/configureOnline.html" >}}
   - {{< link "https://psychopy.org/online/index.html" >}}
 
-- 如果在本地增加了新的文件夹存放图片或excel条件文件，要提前在build界面的设置中，online选项卡下添加这些resources，不然加载图片或条件会报错，提示无法加载相应的材料
 
-  {{< image src="/imgs/online_files.png" alt="online_files" width="600" height="300">}}
+
+
+
+
 
 
 

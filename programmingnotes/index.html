@@ -29,7 +29,7 @@
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https:\/\/bao-wei.github.io\/programmingnotes\/"
-        },"genre": "posts","wordcount":  3287 ,
+        },"genre": "posts","wordcount":  3320 ,
         "url": "https:\/\/bao-wei.github.io\/programmingnotes\/","datePublished": "2022-04-17T16:41:55+08:00","dateModified": "2022-04-30T15:30:45+08:00","publisher": {
             "@type": "Organization",
             "name": "Bao Wei"},"author": {
@@ -76,7 +76,7 @@
 <main class="main">
                 <div class="container"><article class="page single"><h1 class="single-title animated flipInX">Psychopy online experiment programming notes</h1><div class="post-meta">
             <div class="post-meta-line"><span class="post-author"><a href="/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>Bao Wei</a></span>&nbsp;<span class="post-category">included in <a href="/categories/blog/"><i class="far fa-folder fa-fw"></i>Blog</a></span></div>
-            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2022-04-17">2022-04-17</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;3287 words&nbsp;
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2022-04-17">2022-04-17</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;3320 words&nbsp;
                 <i class="far fa-clock fa-fw"></i>&nbsp;7 minutes&nbsp;</div>
         </div><div class="content" id="content"></br>
 <div class="details admonition tip">
@@ -307,7 +307,7 @@
 <p>用<code>height</code>为单位，默认字体大小为<code>0.05</code>，如果高度为1的话就是全屏高度，即像素的<code>1080pix</code>，那<code>0.05</code>就是<code>5%</code>。</p>
 </li>
 <li>
-<p>所以默认的$0.05height \approx 1080pix \times 5$ % $= 54pix $，这根据视角计算工具得出大约为不到<strong>1.1度</strong>视角</p>
+<p>所以默认的$0.05height \approx 1080pix \times 5$ % $= 54pix $，这根据<strong><ruby>视角计算工具<rt>文末有网址</rt></ruby></strong>得出大约为不到<strong>1.1度</strong>视角</p>
 </li>
 <li>
 <p>根据视角计算器，<code>3°</code>视角大约为<code>151pix</code>.</p>
@@ -322,6 +322,24 @@
 </ul>
 <p>⭐stroop正式实验刺激大小为2度(<code>100.5pix</code>，即<code>0.093height</code>)，反馈字体大小为1.5度，掩蔽刺激大小6.4度</p>
 <p>⭐乘法口诀正式实验刺激大小为<code>0.093height</code>(即<code>2°</code>)</p>
+</div>
+        </div>
+    </div>
+<div class="details admonition tip">
+        <div class="details-summary admonition-title">
+            <i class="icon fas fa-lightbulb fa-fw"></i>Tip 14: ⭐本地端和网页端加载资源方式<i class="details-icon fas fa-angle-right fa-fw"></i>
+        </div>
+        <div class="details-content">
+            <div class="admonition-content"><p>如果在本地增加了新的文件夹存放图片或excel条件文件，要提前在<strong>build界面</strong>的<strong>全局设置</strong>中，<strong>online选项卡</strong>下添加这些resources，不然加载图片或条件会报错，提示无法加载相应的材料(如下图)</p>
+<a class="lightgallery" href="/imgs/online_files.png" title="online_files" data-thumbnail="/imgs/online_files.png">
+        <img
+            class="lazyload"
+            src="/svg/loading.min.svg"
+            data-src="/imgs/online_files.png"
+            data-srcset="/imgs/online_files.png, /imgs/online_files.png 1.5x, /imgs/online_files.png 2x"
+            data-sizes="auto"
+            alt="online_files" height="300" width="600" />
+    </a>
 </div>
         </div>
     </div>
@@ -347,28 +365,14 @@
 <li>
 <p>网页端运行时产生“Unknown Resource” issue报错的原因：</p>
 <ul>
-<li>
-<a href="https://discourse.psychopy.org/t/unknown-resource-online-but-works-fine-offline/25793/10" target="_blank" rel="noopener noreffer">https://discourse.psychopy.org/t/unknown-resource-online-but-works-fine-offline/25793/10</a>
-</li>
-<li>
-<a href="https://psychopy.org/online/configureOnline.html" target="_blank" rel="noopener noreffer">https://psychopy.org/online/configureOnline.html</a>
-</li>
-<li>
-<a href="https://psychopy.org/online/index.html" target="_blank" rel="noopener noreffer">https://psychopy.org/online/index.html</a>
-</li>
+<li><a href="https://discourse.psychopy.org/t/unknown-resource-online-but-works-fine-offline/25793/10" target="_blank" rel="noopener noreffer">https://discourse.psychopy.org/t/unknown-resource-online-but-works-fine-offline/25793/10</a></li>
 </ul>
 </li>
 <li>
-<p>如果在本地增加了新的文件夹存放图片或excel条件文件，要提前在build界面的设置中，online选项卡下添加这些resources，不然加载图片或条件会报错，提示无法加载相应的材料</p>
-<a class="lightgallery" href="/imgs/online_files.png" title="online_files" data-thumbnail="/imgs/online_files.png">
-        <img
-            class="lazyload"
-            src="/svg/loading.min.svg"
-            data-src="/imgs/online_files.png"
-            data-srcset="/imgs/online_files.png, /imgs/online_files.png 1.5x, /imgs/online_files.png 2x"
-            data-sizes="auto"
-            alt="online_files" height="300" width="600" />
-    </a>
+<a href="https://psychopy.org/online/configureOnline.html" target="_blank" rel="noopener noreffer">https://psychopy.org/online/configureOnline.html</a>
+<ul>
+<li><a href="https://psychopy.org/online/index.html" target="_blank" rel="noopener noreffer">https://psychopy.org/online/index.html</a></li>
+</ul>
 </li>
 </ul>
 </div><div class="post-footer" id="post-footer">
