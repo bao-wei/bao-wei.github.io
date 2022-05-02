@@ -143,6 +143,33 @@ if ((practice_key_resp_stroop.corr === 0)) {
 
 {{< /admonition >}}
 
+{{< admonition type=tip title="Tip 14: 刺激大小/视角" open=false >}}
+
+> Psychopy的默认单位是height，这个单位的好处是能够根据屏幕的大小自动适配刺激大小，不会因屏幕分辨率不同造成刺激大小不同。
+>
+> 具体参考文档：{{< link "https://www.psychopy.org/general/units.html" >}}
+
+***以我的实验程序为例，需要刺激大小在3°以内，屏幕分辨率是$1920pix \times 1080pix$***
+
+- 视角计算参数：屏幕长：`40cm`  宽：`30cm`，距离屏幕：`60cm`
+
+- 用`height`为单位，默认字体大小为`0.05`，如果高度为1的话就是全屏高度，即像素的`1080pix`，那`0.05`就是`5%`。
+
+- 所以默认的$0.05height \approx 1080pix \times 5$ % $= 54pix $，这根据视角计算工具得出大约为不到**1.1度**视角
+
+- 根据视角计算器，`3°`视角大约为`151pix`.
+
+- 因此，把`151pix`换算到`height`，$height=151pix/1080pix\approx0.14$，即`3°`视角大小的刺激。
+
+- 乘数和被乘数上下移动**0.5度**错开位置，**答案保持中心不变**。
+  移动位置为：$height=25pix/1080pix\approx0.023$。
+
+⭐stroop正式实验刺激大小为2度(`100.5pix`，即`0.093height`)，反馈字体大小为1.5度，掩蔽刺激大小6.4度
+
+⭐乘法口诀正式实验刺激大小为`0.093height`(即`2°`)
+
+{{< /admonition >}}
+
 </br>
 
 ---
@@ -154,6 +181,8 @@ if ((practice_key_resp_stroop.corr === 0)) {
 - 代码仓库地址：{{< link "https://gitlab.pavlovia.org/" >}}
 
 - 在线程序地址：{{< link "https://pavlovia.org/#main" >}}
+
+- 视角计算工具网站：{{< link "https://www.sr-research.com/visual-angle-calculator/" >}}
 
 - 网页端已经支持组件列表：{{< link "https://psychopy.org/online/status.html" >}}
 

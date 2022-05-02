@@ -29,7 +29,7 @@
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https:\/\/bao-wei.github.io\/programmingnotes\/"
-        },"genre": "posts","wordcount":  2674 ,
+        },"genre": "posts","wordcount":  3287 ,
         "url": "https:\/\/bao-wei.github.io\/programmingnotes\/","datePublished": "2022-04-17T16:41:55+08:00","dateModified": "2022-04-30T15:30:45+08:00","publisher": {
             "@type": "Organization",
             "name": "Bao Wei"},"author": {
@@ -76,8 +76,8 @@
 <main class="main">
                 <div class="container"><article class="page single"><h1 class="single-title animated flipInX">Psychopy online experiment programming notes</h1><div class="post-meta">
             <div class="post-meta-line"><span class="post-author"><a href="/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>Bao Wei</a></span>&nbsp;<span class="post-category">included in <a href="/categories/blog/"><i class="far fa-folder fa-fw"></i>Blog</a></span></div>
-            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2022-04-17">2022-04-17</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;2674 words&nbsp;
-                <i class="far fa-clock fa-fw"></i>&nbsp;6 minutes&nbsp;</div>
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2022-04-17">2022-04-17</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;3287 words&nbsp;
+                <i class="far fa-clock fa-fw"></i>&nbsp;7 minutes&nbsp;</div>
         </div><div class="content" id="content"></br>
 <div class="details admonition tip">
         <div class="details-summary admonition-title">
@@ -289,6 +289,42 @@
             <div class="admonition-content">所有数字不能是“<strong>以数字形式储存文本</strong>”的形式在excel表格中，不然psychopy会把这个识别为数字，在excel中设置为“常规”格式即可，然后psychopy中用<code>str()</code>转换为字符即可(括号内为刺激条件名称)</div>
         </div>
     </div>
+<div class="details admonition tip">
+        <div class="details-summary admonition-title">
+            <i class="icon fas fa-lightbulb fa-fw"></i>Tip 14: 刺激大小/视角<i class="details-icon fas fa-angle-right fa-fw"></i>
+        </div>
+        <div class="details-content">
+            <div class="admonition-content"><blockquote>
+<p>Psychopy的默认单位是height，这个单位的好处是能够根据屏幕的大小自动适配刺激大小，不会因屏幕分辨率不同造成刺激大小不同。</p>
+<p>具体参考文档：<a href="https://www.psychopy.org/general/units.html" target="_blank" rel="noopener noreffer"><a href="https://www.psychopy.org/general/units.html" target="_blank" rel="noopener noreffer">https://www.psychopy.org/general/units.html</a></a></p>
+</blockquote>
+<p><em><strong>以我的实验程序为例，需要刺激大小在3°以内，屏幕分辨率是$1920pix \times 1080pix$</strong></em></p>
+<ul>
+<li>
+<p>视角计算参数：屏幕长：<code>40cm</code>  宽：<code>30cm</code>，距离屏幕：<code>60cm</code></p>
+</li>
+<li>
+<p>用<code>height</code>为单位，默认字体大小为<code>0.05</code>，如果高度为1的话就是全屏高度，即像素的<code>1080pix</code>，那<code>0.05</code>就是<code>5%</code>。</p>
+</li>
+<li>
+<p>所以默认的$0.05height \approx 1080pix \times 5$ % $= 54pix $，这根据视角计算工具得出大约为不到<strong>1.1度</strong>视角</p>
+</li>
+<li>
+<p>根据视角计算器，<code>3°</code>视角大约为<code>151pix</code>.</p>
+</li>
+<li>
+<p>因此，把<code>151pix</code>换算到<code>height</code>，$height=151pix/1080pix\approx0.14$，即<code>3°</code>视角大小的刺激。</p>
+</li>
+<li>
+<p>乘数和被乘数上下移动<strong>0.5度</strong>错开位置，<strong>答案保持中心不变</strong>。
+移动位置为：$height=25pix/1080pix\approx0.023$。</p>
+</li>
+</ul>
+<p>⭐stroop正式实验刺激大小为2度(<code>100.5pix</code>，即<code>0.093height</code>)，反馈字体大小为1.5度，掩蔽刺激大小6.4度</p>
+<p>⭐乘法口诀正式实验刺激大小为<code>0.093height</code>(即<code>2°</code>)</p>
+</div>
+        </div>
+    </div>
 </br>
 <hr>
 <p><strong><font color=#55bde2>参考内容</font></strong></p>
@@ -298,6 +334,9 @@
 </li>
 <li>
 <p>在线程序地址：<a href="https://pavlovia.org/#main" target="_blank" rel="noopener noreffer">https://pavlovia.org/#main</a></p>
+</li>
+<li>
+<p>视角计算工具网站：<a href="https://www.sr-research.com/visual-angle-calculator/" target="_blank" rel="noopener noreffer">https://www.sr-research.com/visual-angle-calculator/</a></p>
 </li>
 <li>
 <p>网页端已经支持组件列表：<a href="https://psychopy.org/online/status.html" target="_blank" rel="noopener noreffer">https://psychopy.org/online/status.html</a></p>
