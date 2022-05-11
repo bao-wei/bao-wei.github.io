@@ -33,9 +33,9 @@ My research focus is on reasoning and decision-making, especially Dual-process t
 
 **Wei Bao**, Junlong Luo. A hybrid of intuition: fast deliberative thinking. (writing)
 
-**Wei Bao**, Yunhong Wang, Junlong Luo[:(far fa-regular fa-envelope):](https://www.researchgate.net/profile/Junlong-Luo). (2022). Women rely on “gut feeling”? The neural pattern of gender difference in non-mathematic intuition. *Personality and Individual Differences*. (under review) 
+**Wei Bao**, Yunhong Wang, Junlong Luo[:(far fa-regular fa-envelope):](https://www.researchgate.net/profile/Junlong-Luo). (2022). Women rely on “gut feeling”? The neural pattern of gender difference in non-mathematic intuition. *Personality and Individual Differences*. (Accept) 
 
-**Wei Bao**, Yunhong Wang, Xin Xin, Haijiang Li, Junlong Luo[:(far fa-regular fa-envelope):](https://www.researchgate.net/profile/Junlong-Luo). (2022). What you want may not be what you bought: Consumer attitudes in the context of emerging mobile payments. *PsyCh Journal*. (under review)
+**Wei Bao**, Yunhong Wang, Xin Xin, Haijiang Li, Junlong Luo[:(far fa-regular fa-envelope):](https://www.researchgate.net/profile/Junlong-Luo). (2022). What you want may not be what you bought: Consumer attitudes in the context of emerging mobile payments.  (Submitting)
 
 ## Peer-reviewed publications
 
