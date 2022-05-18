@@ -31,9 +31,7 @@ My research focus is on reasoning and decision-making, especially Dual-process t
 
 ## Working papers
 
-**Wei Bao**, Junlong Luo. A hybrid of intuition: fast deliberative thinking. (writing)
-
-**Wei Bao**, Yunhong Wang, Junlong Luo[:(far fa-regular fa-envelope):](https://www.researchgate.net/profile/Junlong-Luo). (2022). Women rely on “gut feeling”? The neural pattern of gender difference in non-mathematic intuition. *Personality and Individual Differences*. (Accept) 
+**Wei Bao**, Junlong Luo[:(far fa-regular fa-envelope):](https://www.researchgate.net/profile/Junlong-Luo). A hybrid of intuition: fast deliberative thinking. (writing)
 
 **Wei Bao**, Yunhong Wang, Xin Xin, Haijiang Li, Junlong Luo[:(far fa-regular fa-envelope):](https://www.researchgate.net/profile/Junlong-Luo). (2022). What you want may not be what you bought: Consumer attitudes in the context of emerging mobile payments.  (Submitting)
 
@@ -42,6 +40,8 @@ My research focus is on reasoning and decision-making, especially Dual-process t
 *indicates equal contribution
 
 ### 2022
+
+**Wei Bao**, Yunhong Wang, Junlong Luo[:(far fa-regular fa-envelope):](https://www.researchgate.net/profile/Junlong-Luo). (2022). Women rely on “gut feeling”? The neural pattern of gender difference in non-mathematic intuition. *Personality and Individual Differences, 196,* 111720. https://doi.org/10.1016/j.paid.2022.111720
 
 **Wei Bao**, Yunhong Wang*, Xue Fu, Caizhen Yue:(far fa-regular fa-envelope): & Junlong Luo[:(far fa-regular fa-envelope):](https://www.researchgate.net/profile/Junlong-Luo). (2022). Is the Negative Bias in Self-appraisal of Late-adolescents with Mild Depression Derived from their Mother?. *Current Psychology*, https://doi.org/10.1007/s12144-022-02742-7
 
