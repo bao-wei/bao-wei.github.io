@@ -182,7 +182,7 @@ if ((practice_key_resp_stroop.corr === 0)) {
 
 在这里先打开浏览器的开发者选项查看报错是什么，Chrome和Edge浏览器是按住`Ctrl+Shift`再按`I`。如果报错是connection相关的，那就可以参考下方的解决方法，如果报错是syntax相关的，那就参考这个[解决方法](https://psychopy.org/online/psychoJSCodingDebugging.html#launch-errors-stuck-on-initialising-the-experiment)
 
-**原因：**导致程序卡在白屏位置是因为Psychopy的online实验网站Pavlovia在线加载程序时需要依赖nmp开源代码(具体是什么我也不清楚，理解为网页端需要的资源即可)。其中涉及到js和CSS代码，都是在线程序打开需要用的基础代码，且这些代码是开源的。而Pavlovia使用的这个代码是jsdeliver网站下的，这个网站由于网站证书到期，没有续期，所以被国内屏蔽，就导致在线程序需要的网页资源无法加载，所以就卡在白屏位置。
+**原因:** 导致程序卡在白屏位置是因为Psychopy的online实验网站Pavlovia在线加载程序时需要依赖nmp开源代码(具体是什么我也不清楚，理解为网页端需要的资源即可)。其中涉及到js和CSS代码，都是在线程序打开需要用的基础代码，且这些代码是开源的。而Pavlovia使用的这个代码是jsdeliver网站下的，这个网站由于网站证书到期，没有续期，所以被国内屏蔽，就导致在线程序需要的网页资源无法加载，所以就卡在白屏位置。
 
 **解决方法：**
 
