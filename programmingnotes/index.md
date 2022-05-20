@@ -192,9 +192,9 @@ if ((practice_key_resp_stroop.corr === 0)) {
 
   将`https://cdn.jsdelivr.net/npm/`改为`https://unpkg.com/`，其他部分保持不变，或者直接用后面这个网址替换上述几行网址代码也行：`https://unpkg.com/jquery-ui-dist@1.12.1/jquery-ui.min.css`
 
-  {{< image src="/imgs/index_jsdeliver.png" alt="online_files" width="600" height="300">}}
+  {{< image src="/imgs/index_jsdeliver.png" alt="index_html" width="600" height="300">}}
 
-- 这个的原理就是换一个开源代码的源，其他源可以参考这个[知乎回答](https://zhuanlan.zhihu.com/p/447713250)
+- 这个的原理就是换一个开源代码的源，其他源可以参考这个知乎回答：[jsdelivr cdn报错无法访问](https://zhuanlan.zhihu.com/p/447713250)
 
 {{< /admonition >}}
 
