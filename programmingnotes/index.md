@@ -178,6 +178,26 @@ if ((practice_key_resp_stroop.corr === 0)) {
 
 {{< /admonition >}}
 
+{{< admonition type=tip title="Tip 16: ⭐打开在线实验卡在：Initialising experiment白屏" open=false >}}
+
+在这里先打开浏览器的开发者选项查看报错是什么，Chrome和Edge浏览器是按住`Ctrl+Shift`再按`I`。如果报错是connection相关的，那就可以参考下方的解决方法，如果报错是syntax相关的，那就参考这个[解决方法](https://psychopy.org/online/psychoJSCodingDebugging.html#launch-errors-stuck-on-initialising-the-experiment)
+
+**原因：**导致程序卡在白屏位置是因为Psychopy的online实验网站Pavlovia在线加载程序时需要依赖nmp开源代码(具体是什么我也不清楚，理解为网页端需要的资源即可)。其中涉及到js和CSS代码，都是在线程序打开需要用的基础代码，且这些代码是开源的。而Pavlovia使用的这个代码是jsdeliver网站下的，这个网站由于网站证书到期，没有续期，所以被国内屏蔽，就导致在线程序需要的网页资源无法加载，所以就卡在白屏位置。
+
+**解决方法：**
+
+- 在上传实验后，在你电脑上程序文件夹里应该有一个`index.html`网页文件，这个文件在你每次修改并上传程序后都会被覆盖，且里面的内容都会被修改为默认内容。这个是需要注意的。
+
+- 在你的在线仓库里(不知道这是什么的自己查一下)，同样也会有`index.html`这个文件。打开这个文件，修改下图中的第8、14、15、16行网址，修改内容如下：
+
+  将`https://cdn.jsdelivr.net/npm/`改为`https://unpkg.com/`，其他部分保持不变，或者直接用后面这个网址替换上述几行网址代码也行：`https://unpkg.com/jquery-ui-dist@1.12.1/jquery-ui.min.css`
+
+  {{< image src="/imgs/index_jsdeliver.png" alt="online_files" width="600" height="300">}}
+
+- 这个的原理就是换一个开源代码的源，其他源可以参考这个[知乎回答](https://zhuanlan.zhihu.com/p/447713250)
+
+{{< /admonition >}}
+
 </br>
 
 ---
@@ -186,6 +206,7 @@ if ((practice_key_resp_stroop.corr === 0)) {
 
 **<font color=#55bde2>参考内容</font>**
 
+- Psychopy论坛：{{< link "https://discourse.psychopy.org/" >}}
 - 代码仓库地址：{{< link "https://gitlab.pavlovia.org/" >}}
 - 在线程序地址：{{< link "https://pavlovia.org/#main" >}}
 - 视角计算工具网站：{{< link "https://www.sr-research.com/visual-angle-calculator/" >}}

@@ -29,7 +29,7 @@
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https:\/\/bao-wei.github.io\/programmingnotes\/"
-        },"genre": "posts","wordcount":  3320 ,
+        },"genre": "posts","wordcount":  4070 ,
         "url": "https:\/\/bao-wei.github.io\/programmingnotes\/","datePublished": "2022-04-17T16:41:55+08:00","dateModified": "2022-04-30T15:30:45+08:00","publisher": {
             "@type": "Organization",
             "name": "Bao Wei"},"author": {
@@ -76,8 +76,8 @@
 <main class="main">
                 <div class="container"><article class="page single"><h1 class="single-title animated flipInX">Psychopy online experiment programming notes</h1><div class="post-meta">
             <div class="post-meta-line"><span class="post-author"><a href="/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>Bao Wei</a></span>&nbsp;<span class="post-category">included in <a href="/categories/blog/"><i class="far fa-folder fa-fw"></i>Blog</a></span></div>
-            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2022-04-17">2022-04-17</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;3320 words&nbsp;
-                <i class="far fa-clock fa-fw"></i>&nbsp;7 minutes&nbsp;</div>
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2022-04-17">2022-04-17</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;4070 words&nbsp;
+                <i class="far fa-clock fa-fw"></i>&nbsp;9 minutes&nbsp;</div>
         </div><div class="content" id="content"></br>
 <div class="details admonition tip">
         <div class="details-summary admonition-title">
@@ -343,10 +343,45 @@
 </div>
         </div>
     </div>
+<div class="details admonition tip">
+        <div class="details-summary admonition-title">
+            <i class="icon fas fa-lightbulb fa-fw"></i>Tip 16: ⭐打开在线实验卡在：Initialising experiment白屏<i class="details-icon fas fa-angle-right fa-fw"></i>
+        </div>
+        <div class="details-content">
+            <div class="admonition-content"><p>在这里先打开浏览器的开发者选项查看报错是什么，Chrome和Edge浏览器是按住<code>Ctrl+Shift</code>再按<code>I</code>。如果报错是connection相关的，那就可以参考下方的解决方法，如果报错是syntax相关的，那就参考这个<a href="https://psychopy.org/online/psychoJSCodingDebugging.html#launch-errors-stuck-on-initialising-the-experiment" target="_blank" rel="noopener noreffer">解决方法</a></p>
+<p>**原因：**导致程序卡在白屏位置是因为Psychopy的online实验网站Pavlovia在线加载程序时需要依赖nmp开源代码(具体是什么我也不清楚，理解为网页端需要的资源即可)。其中涉及到js和CSS代码，都是在线程序打开需要用的基础代码，且这些代码是开源的。而Pavlovia使用的这个代码是jsdeliver网站下的，这个网站由于网站证书到期，没有续期，所以被国内屏蔽，就导致在线程序需要的网页资源无法加载，所以就卡在白屏位置。</p>
+<p><strong>解决方法：</strong></p>
+<ul>
+<li>
+<p>在上传实验后，在你电脑上程序文件夹里应该有一个<code>index.html</code>网页文件，这个文件在你每次修改并上传程序后都会被覆盖，且里面的内容都会被修改为默认内容。这个是需要注意的。</p>
+</li>
+<li>
+<p>在你的在线仓库里(不知道这是什么的自己查一下)，同样也会有<code>index.html</code>这个文件。打开这个文件，修改下图中的第8、14、15、16行网址，修改内容如下：</p>
+<p>将<code>https://cdn.jsdelivr.net/npm/</code>改为<code>https://unpkg.com/</code>，其他部分保持不变，或者直接用后面这个网址替换上述几行网址代码也行：<code>https://unpkg.com/jquery-ui-dist@1.12.1/jquery-ui.min.css</code></p>
+<a class="lightgallery" href="/imgs/index_jsdeliver.png" title="online_files" data-thumbnail="/imgs/index_jsdeliver.png">
+      <img
+          class="lazyload"
+          src="/svg/loading.min.svg"
+          data-src="/imgs/index_jsdeliver.png"
+          data-srcset="/imgs/index_jsdeliver.png, /imgs/index_jsdeliver.png 1.5x, /imgs/index_jsdeliver.png 2x"
+          data-sizes="auto"
+          alt="online_files" height="300" width="600" />
+  </a>
+</li>
+<li>
+<p>这个的原理就是换一个开源代码的源，其他源可以参考这个<a href="https://zhuanlan.zhihu.com/p/447713250" target="_blank" rel="noopener noreffer">知乎回答</a></p>
+</li>
+</ul>
+</div>
+        </div>
+    </div>
 </br>
 <hr>
 <p><strong><font color=#55bde2>参考内容</font></strong></p>
 <ul>
+<li>
+<p>Psychopy论坛：<a href="https://discourse.psychopy.org/" target="_blank" rel="noopener noreffer">https://discourse.psychopy.org/</a></p>
+</li>
 <li>
 <p>代码仓库地址：<a href="https://gitlab.pavlovia.org/" target="_blank" rel="noopener noreffer">https://gitlab.pavlovia.org/</a></p>
 </li>
