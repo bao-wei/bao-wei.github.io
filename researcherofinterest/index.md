@@ -37,12 +37,6 @@
 
 </br>
 
-# Matthieu Raoelison
-
-{{< image src="/imgs/researchgate.png" height="20" >}}[ResearchGate](https://www.researchgate.net/profile/Bence-Bago-2/research) | {{< image src="/imgs/home.png" height="20" >}}[HomePage](https://www.iast.fr/people/bence-bago?tab=publications)
-
-</br>
-
 # David G. Rand
 
 {{< image src="/imgs/home.png" height="20" >}}[HomePage](https://mitsloan.mit.edu/faculty/directory/david-g-rand)
