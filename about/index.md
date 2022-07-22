@@ -3,7 +3,7 @@
 
 # :(far fa-thin fa-address-card): Contact 
 
-[ResearchGate](https://www.researchgate.net/profile/Wei-Bao-9) | baoweibow@163.com | baoweibow@gmail.com
+{{< image src="/imgs/researchgate.png" height="20" >}}[ResearchGate](https://www.researchgate.net/profile/Wei-Bao-9) | {{< image src="/imgs/网易邮箱.png" height="20" >}}baoweibow@163.com | {{< image src="/imgs/gmail.png" height="20" >}}baoweibow@gmail.com
 
 <br>
 
