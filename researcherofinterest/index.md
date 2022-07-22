@@ -13,6 +13,12 @@
 
 </br>
 
+# Linden J. Ball
+
+{{< image src="/imgs/researchgate.png" height="20" >}}[ResearchGate](https://www.researchgate.net/profile/Linden-Ball/research)
+
+</br>
+
 # Simon J Handley
 
 {{< image src="/imgs/researchgate.png" height="20" >}}[ResearchGate](https://www.researchgate.net/profile/Simon-Handley-3/research) | {{< image src="/imgs/home.png" height="20" >}}[HomePage](https://researchers.mq.edu.au/en/persons/simon-handley/publications/)
