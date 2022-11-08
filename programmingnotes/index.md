@@ -99,7 +99,7 @@ if ((practice_key_resp_stroop.corr === 0)) {
 
 两部分代码唯一的区别在于：无反应在python中的表示为`None`，在js中的表示为`undefined`，这里为了本地端和网页端都能正常运行，就将代码模式设置为`both`，这样python代码和js代码就可以不一样，这样两端都可以正常运行程序。
 
-**更新**：`None`和`undefined`从 psychopy2022.2.3版本以后似乎不存在这个问题了，直接用`None`即可。
+**更新**：`None`和`undefined`从 psychopy2022.2.3版本以后似乎不存在这个问题了，code组件的code type直接用`Auto->Js`模式即可。
 
 {{< /admonition >}}
 
