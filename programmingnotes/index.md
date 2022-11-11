@@ -336,6 +336,12 @@ else:
 
 {{< /admonition >}}
 
+{{< admonition type=tip title="Tip 3: ⭐EEG实验中Psychopy发送Mark" open=false >}}
+
+[Psychopy EEG Trigger Notes]({{< relref "psychopyeegtriggernotes" >}} "Psychopy EEG Trigger Notes")
+
+{{< /admonition >}}
+
 </br>
 
 ---
