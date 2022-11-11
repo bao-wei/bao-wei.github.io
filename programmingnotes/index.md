@@ -345,16 +345,28 @@ else:
 **<font color=#55bde2>参考内容</font>**
 
 - Psychopy论坛：{{< link "https://discourse.psychopy.org/" >}}
+
 - 代码仓库地址：{{< link "https://gitlab.pavlovia.org/" >}}
+
 - 在线程序地址：{{< link "https://pavlovia.org/#main" >}}
+
 - 视角计算工具网站：{{< link "https://www.sr-research.com/visual-angle-calculator/" >}}
+
 - 网页端已经支持组件列表：{{< link "https://psychopy.org/online/status.html" >}}
+
 - python代码和js代码转换文档：{{< link "https://discourse.psychopy.org/t/psychopy-python-to-javascript-crib-sheet/14601" >}}
+
 - 网页端运行时产生“Unknown Resource” issue报错的原因： 
 
   - {{< link "https://discourse.psychopy.org/t/unknown-resource-online-but-works-fine-offline/25793/10" >}}
   - {{< link "https://psychopy.org/online/configureOnline.html" >}}
   - {{< link "https://psychopy.org/online/index.html" >}}
+
+- ⭐参考书籍推荐：
+
+  《实验编程：PsychoPy从入门到精通》
+
+  {{< image src="/imgs/psychopy_book.jpg" alt="psychopy book" width="600" height="300">}}
 
 
 
