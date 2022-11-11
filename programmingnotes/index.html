@@ -29,7 +29,7 @@
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https:\/\/bao-wei.github.io\/programmingnotes\/"
-        },"genre": "posts","wordcount":  5277 ,
+        },"genre": "posts","wordcount":  5280 ,
         "url": "https:\/\/bao-wei.github.io\/programmingnotes\/","datePublished": "2022-04-17T16:41:55+08:00","dateModified": "2022-11-11T00:00:00+00:00","publisher": {
             "@type": "Organization",
             "name": "Bao Wei"},"author": {
@@ -76,7 +76,7 @@
 <main class="main">
                 <div class="container"><article class="page single"><h1 class="single-title animated flipInX">Psychopy online experiment programming notes</h1><div class="post-meta">
             <div class="post-meta-line"><span class="post-author"><a href="/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>Bao Wei</a></span>&nbsp;<span class="post-category">included in <a href="/categories/blog/"><i class="far fa-folder fa-fw"></i>Blog</a></span></div>
-            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2022-04-17">2022-04-17</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;5277 words&nbsp;
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2022-04-17">2022-04-17</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;5280 words&nbsp;
                 <i class="far fa-clock fa-fw"></i>&nbsp;11 minutes&nbsp;</div>
         </div><div class="content" id="content"></br>
 <h1 id="online-and-offline-experiment">Online and Offline Experiment</h1>
@@ -295,6 +295,58 @@
 </div>
         </div>
     </div>
+<div class="details admonition tip">
+        <div class="details-summary admonition-title">
+            <i class="icon fas fa-lightbulb fa-fw"></i>Tip 9: ⭐增加中途休息<i class="details-icon fas fa-angle-right fa-fw"></i>
+        </div>
+        <div class="details-content">
+            <div class="admonition-content"><p>在单个试次的<code>loop</code>下，新增一个<code>routine</code>，在这个<code>routine</code>中添加一个code组件，在里面的<code>begin routine</code>下增加如下代码：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="k">if</span> <span class="n">trials</span><span class="o">.</span><span class="n">thisTrialN</span><span class="o">==</span><span class="mi">191</span> <span class="ow">or</span> <span class="n">trials</span><span class="o">.</span><span class="n">thisTrialN</span><span class="o">==</span><span class="mi">383</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">    <span class="n">continueRoutine</span> <span class="o">=</span> <span class="kc">True</span>
+</span></span><span class="line"><span class="cl"><span class="k">else</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">    <span class="n">continueRoutine</span> <span class="o">=</span> <span class="kc">False</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>⚠️<code>trials.thisTrialN</code>中的trials要根据loop的名称对应修改，因为我设置的loop名称为<code>trials</code>，如果loop名称为<code>trials_stroop</code>，那就要修改为<code>trials_stroop.thisTrialN</code>。</p>
+<p>代码解释：如果试次数达到191或383，则运行该Routine，其他试次则不运行。运行该Routine时，则弹出文字“请休息一下，按空格键继续”。如下图。</p>
+<a class="lightgallery" href="/imgs/psychopy_rest.png" title="rest_code_1" data-thumbnail="/imgs/psychopy_rest.png">
+        <img
+            class="lazyload"
+            src="/svg/loading.min.svg"
+            data-src="/imgs/psychopy_rest.png"
+            data-srcset="/imgs/psychopy_rest.png, /imgs/psychopy_rest.png 1.5x, /imgs/psychopy_rest.png 2x"
+            data-sizes="auto"
+            alt="rest_code_1" height="300" width="600" />
+    </a>
+<a class="lightgallery" href="/imgs/psychopy_rest2.png" title="rest_code_2" data-thumbnail="/imgs/psychopy_rest2.png">
+        <img
+            class="lazyload"
+            src="/svg/loading.min.svg"
+            data-src="/imgs/psychopy_rest2.png"
+            data-srcset="/imgs/psychopy_rest2.png, /imgs/psychopy_rest2.png 1.5x, /imgs/psychopy_rest2.png 2x"
+            data-sizes="auto"
+            alt="rest_code_2" height="300" width="600" />
+    </a>
+<a class="lightgallery" href="/imgs/psychopy_rest3.png" title="rest_code_3" data-thumbnail="/imgs/psychopy_rest3.png">
+        <img
+            class="lazyload"
+            src="/svg/loading.min.svg"
+            data-src="/imgs/psychopy_rest3.png"
+            data-srcset="/imgs/psychopy_rest3.png, /imgs/psychopy_rest3.png 1.5x, /imgs/psychopy_rest3.png 2x"
+            data-sizes="auto"
+            alt="rest_code_3" height="300" width="600" />
+    </a>
+</div>
+        </div>
+    </div>
 <h1 id="online-experiment">Online Experiment</h1>
 <div class="details admonition tip">
         <div class="details-summary admonition-title">
@@ -446,58 +498,6 @@
 </div>
         </div>
     </div>
-<div class="details admonition tip">
-        <div class="details-summary admonition-title">
-            <i class="icon fas fa-lightbulb fa-fw"></i>Tip 11: ⭐增加中途休息<i class="details-icon fas fa-angle-right fa-fw"></i>
-        </div>
-        <div class="details-content">
-            <div class="admonition-content"><p>在单个试次的<code>loop</code>下，新增一个<code>routine</code>，在这个<code>routine</code>中添加一个code组件，在里面的<code>begin routine</code>下增加如下代码：</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span><span class="lnt">4
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="k">if</span> <span class="n">trials</span><span class="o">.</span><span class="n">thisTrialN</span><span class="o">==</span><span class="mi">191</span> <span class="ow">or</span> <span class="n">trials</span><span class="o">.</span><span class="n">thisTrialN</span><span class="o">==</span><span class="mi">383</span><span class="p">:</span>
-</span></span><span class="line"><span class="cl">    <span class="n">continueRoutine</span> <span class="o">=</span> <span class="kc">True</span>
-</span></span><span class="line"><span class="cl"><span class="k">else</span><span class="p">:</span>
-</span></span><span class="line"><span class="cl">    <span class="n">continueRoutine</span> <span class="o">=</span> <span class="kc">False</span>
-</span></span></code></pre></td></tr></table>
-</div>
-</div><p>⚠️<code>trials.thisTrialN</code>中的trials要根据loop的名称对应修改，因为我设置的loop名称为<code>trials</code>，如果loop名称为<code>trials_stroop</code>，那就要修改为<code>trials_stroop.thisTrialN</code>。</p>
-<p>代码解释：如果试次数达到191或383，则运行该Routine，其他试次则不运行。运行该Routine时，则弹出文字“请休息一下，按空格键继续”。如下图。</p>
-<a class="lightgallery" href="/imgs/psychopy_rest.png" title="rest_code_1" data-thumbnail="/imgs/psychopy_rest.png">
-        <img
-            class="lazyload"
-            src="/svg/loading.min.svg"
-            data-src="/imgs/psychopy_rest.png"
-            data-srcset="/imgs/psychopy_rest.png, /imgs/psychopy_rest.png 1.5x, /imgs/psychopy_rest.png 2x"
-            data-sizes="auto"
-            alt="rest_code_1" height="300" width="600" />
-    </a>
-<a class="lightgallery" href="/imgs/psychopy_rest2.png" title="rest_code_2" data-thumbnail="/imgs/psychopy_rest2.png">
-        <img
-            class="lazyload"
-            src="/svg/loading.min.svg"
-            data-src="/imgs/psychopy_rest2.png"
-            data-srcset="/imgs/psychopy_rest2.png, /imgs/psychopy_rest2.png 1.5x, /imgs/psychopy_rest2.png 2x"
-            data-sizes="auto"
-            alt="rest_code_2" height="300" width="600" />
-    </a>
-<a class="lightgallery" href="/imgs/psychopy_rest3.png" title="rest_code_3" data-thumbnail="/imgs/psychopy_rest3.png">
-        <img
-            class="lazyload"
-            src="/svg/loading.min.svg"
-            data-src="/imgs/psychopy_rest3.png"
-            data-srcset="/imgs/psychopy_rest3.png, /imgs/psychopy_rest3.png 1.5x, /imgs/psychopy_rest3.png 2x"
-            data-sizes="auto"
-            alt="rest_code_3" height="300" width="600" />
-    </a>
-</div>
-        </div>
-    </div>
 <h1 id="offline-experiment">Offline Experiment</h1>
 <div class="details admonition tip">
         <div class="details-summary admonition-title">
@@ -589,6 +589,7 @@
 </div>
 </div><hr>
 <p>参考：</p>
+<p><a href="https://discourse.psychopy.org/t/counterbalancing-across-participants/11989/7" target="_blank" rel="noopener noreffer">Counterbalancing across participants</a></p>
 <p><a href="https://blog.csdn.net/weixin_44178960/article/details/117266731" target="_blank" rel="noopener noreffer">python 从字符串中提取数字</a></p>
 <p><a href="https://blog.csdn.net/qq_38486203/article/details/80309478" target="_blank" rel="noopener noreffer">python从字符串中提取数字</a></p>
 <hr>

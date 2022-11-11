@@ -142,6 +142,29 @@ if ((practice_key_resp_stroop.corr === 0)) {
 
 {{< /admonition >}}
 
+{{< admonition type=tip title="Tip 9: ⭐增加中途休息" open=false >}}
+
+在单个试次的`loop`下，新增一个`routine`，在这个`routine`中添加一个code组件，在里面的`begin routine`下增加如下代码：
+
+```python
+if trials.thisTrialN==191 or trials.thisTrialN==383:
+    continueRoutine = True
+else:
+    continueRoutine = False
+```
+
+⚠️`trials.thisTrialN`中的trials要根据loop的名称对应修改，因为我设置的loop名称为`trials`，如果loop名称为`trials_stroop`，那就要修改为`trials_stroop.thisTrialN`。
+
+代码解释：如果试次数达到191或383，则运行该Routine，其他试次则不运行。运行该Routine时，则弹出文字“请休息一下，按空格键继续”。如下图。
+
+{{< image src="/imgs/psychopy_rest.png" alt="rest_code_1" width="600" height="300">}}
+
+{{< image src="/imgs/psychopy_rest2.png" alt="rest_code_2" width="600" height="300">}}
+
+{{< image src="/imgs/psychopy_rest3.png" alt="rest_code_3" width="600" height="300">}}
+
+{{< /admonition >}}
+
 # Online Experiment 
 
 {{< admonition type=tip title="Tip 1: 在线运行错误可能原因" open=false >}}
@@ -239,29 +262,6 @@ if ((practice_key_resp_stroop.corr === 0)) {
 
 {{< /admonition >}}
 
-{{< admonition type=tip title="Tip 11: ⭐增加中途休息" open=false >}}
-
-在单个试次的`loop`下，新增一个`routine`，在这个`routine`中添加一个code组件，在里面的`begin routine`下增加如下代码：
-
-```python
-if trials.thisTrialN==191 or trials.thisTrialN==383:
-    continueRoutine = True
-else:
-    continueRoutine = False
-```
-
-⚠️`trials.thisTrialN`中的trials要根据loop的名称对应修改，因为我设置的loop名称为`trials`，如果loop名称为`trials_stroop`，那就要修改为`trials_stroop.thisTrialN`。
-
-代码解释：如果试次数达到191或383，则运行该Routine，其他试次则不运行。运行该Routine时，则弹出文字“请休息一下，按空格键继续”。如下图。
-
-{{< image src="/imgs/psychopy_rest.png" alt="rest_code_1" width="600" height="300">}}
-
-{{< image src="/imgs/psychopy_rest2.png" alt="rest_code_2" width="600" height="300">}}
-
-{{< image src="/imgs/psychopy_rest3.png" alt="rest_code_3" width="600" height="300">}}
-
-{{< /admonition >}}
-
 # Offline Experiment
 
 {{< admonition type=tip title="Tip 1: ⭐按键平衡代码" open=false >}}
@@ -317,6 +317,8 @@ else:
 ---
 
 参考：
+
+[Counterbalancing across participants](https://discourse.psychopy.org/t/counterbalancing-across-participants/11989/7)
 
 [python 从字符串中提取数字](https://blog.csdn.net/weixin_44178960/article/details/117266731)
 

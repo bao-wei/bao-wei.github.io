@@ -29,7 +29,7 @@
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https:\/\/bao-wei.github.io\/psychopyeegtriggernotes\/"
-        },"genre": "posts","wordcount":  2094 ,
+        },"genre": "posts","wordcount":  2125 ,
         "url": "https:\/\/bao-wei.github.io\/psychopyeegtriggernotes\/","datePublished": "2022-11-11T15:52:39+08:00","dateModified": "2022-11-11T00:00:00+00:00","publisher": {
             "@type": "Organization",
             "name": "Bao Wei"},"author": {
@@ -76,7 +76,7 @@
 <main class="main">
                 <div class="container"><article class="page single"><h1 class="single-title animated flipInX">Psychopy EEG Trigger Notes</h1><div class="post-meta">
             <div class="post-meta-line"><span class="post-author"><a href="/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>Bao Wei</a></span>&nbsp;<span class="post-category">included in <a href="/categories/blog/"><i class="far fa-folder fa-fw"></i>Blog</a></span></div>
-            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2022-11-11">2022-11-11</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;2094 words&nbsp;
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2022-11-11">2022-11-11</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;2125 words&nbsp;
                 <i class="far fa-clock fa-fw"></i>&nbsp;5 minutes&nbsp;</div>
         </div><div class="content" id="content"></br>
 <blockquote>
@@ -100,21 +100,30 @@
 <ol>
 <li>在<strong>SCREEN_3</strong>组件下方添加一个 <strong>Parallel Out</strong> 并行端口组件（Builder窗口下，右边Component选项卡 &ndash;&gt; EEG选项卡 &ndash;&gt; Parallel Out），如上图，<code>p_port_2</code>是我添加的并行端口组件</li>
 <li>点开<code>p_port_2</code>组件的属性选择 &mdash;&gt; <strong><ruby>基础<rt>Basic</rt></ruby></strong>选项卡中&mdash;&gt;<strong>Start</strong>，即<strong>Mark</strong>的开始方式。在下拉选项卡中选则<strong><ruby>条件<rt>condition</rt></ruby></strong>，在后方加入代码：<code>$SCREEN_3.status==STARTED</code>。表示<strong>SCREEN_3组件</strong>一开始，<strong>p_port_2组件</strong>就发送Mark</li>
-<li>在Stop中，将<strong><ruby>持续时间<rt>duration time</rt></ruby></strong>改为0.1，即100ms。这个持续时间建议不低于0.016秒，即60Hz刷新率下的一帧的时间。</li>
-<li>然后在<strong><ruby>数据<rt>data</rt></ruby></strong>选项卡中 &mdash;&gt; Start data的框内，输入你条件文件中指代Mark对应的变量名，如下图，我在excel文件中，有一列变量为Mark类型，这一列的名字为condition_type，把这个列名放在这里即可。</li>
+<li>在<strong>Start</strong>的下方<strong>Stop</strong>，将<strong><ruby>持续时间<rt>duration time</rt></ruby></strong>改为0.1，即100ms。这个持续时间建议不低于0.016秒，即60Hz刷新率下的一帧的时间。</li>
+<li>然后在<strong><ruby>数据<rt>data</rt></ruby></strong>选项卡中 &mdash;&gt; <strong>Start data</strong>的框内，输入你条件文件中指代Mark对应的变量名，如下图，我在excel文件中，有一列变量为Mark类型，这一列的名字为condition_type，把这个列名放在这里即可。<strong>Stop data</strong>框内保持默认<code>0</code></li>
 </ol>
-<a class="lightgallery" href="/imgs/Blog_EEG_Trigger_pic1.png" title="Stimuli Mark" data-thumbnail="/imgs/Blog_EEG_Trigger_pic1.png">
+<a class="lightgallery" href="/imgs/Blog_EEG_Trigger_pic2.png" title="Stimuli Mark" data-thumbnail="/imgs/Blog_EEG_Trigger_pic2.png">
         <img
             class="lazyload"
             src="/svg/loading.min.svg"
-            data-src="/imgs/Blog_EEG_Trigger_pic1.png"
-            data-srcset="/imgs/Blog_EEG_Trigger_pic1.png, /imgs/Blog_EEG_Trigger_pic1.png 1.5x, /imgs/Blog_EEG_Trigger_pic1.png 2x"
+            data-src="/imgs/Blog_EEG_Trigger_pic2.png"
+            data-srcset="/imgs/Blog_EEG_Trigger_pic2.png, /imgs/Blog_EEG_Trigger_pic2.png 1.5x, /imgs/Blog_EEG_Trigger_pic2.png 2x"
             data-sizes="auto"
             alt="Stimuli Mark" height="300" width="600" />
     </a>
 <ol start="5">
 <li>
 <p>然后切换到<strong><ruby>硬件<rt>hardware</rt></ruby></strong>选项卡 &mdash;&gt; <strong>Port address</strong>位置选择设备对应的<strong>端口号</strong></p>
+<a class="lightgallery" href="/imgs/Blog_EEG_Trigger_pic3.png" title="Stimuli Mark" data-thumbnail="/imgs/Blog_EEG_Trigger_pic3.png">
+           <img
+               class="lazyload"
+               src="/svg/loading.min.svg"
+               data-src="/imgs/Blog_EEG_Trigger_pic3.png"
+               data-srcset="/imgs/Blog_EEG_Trigger_pic3.png, /imgs/Blog_EEG_Trigger_pic3.png 1.5x, /imgs/Blog_EEG_Trigger_pic3.png 2x"
+               data-sizes="auto"
+               alt="Stimuli Mark" height="300" width="600" />
+       </a>
 <p>如果没有你设备的端口号，就需要手动添加 &mdash;&gt; <a href="https://psychopy.org/hardware/parallelPortInstr.html" target="_blank" rel="noopener noreffer">添加方法</a></p>
 </li>
 </ol>
@@ -139,18 +148,18 @@
 </ul>
 <p><strong>操作方式：</strong></p>
 <ol>
-<li>如下图，我设置按键组件是<strong>key_resp</strong>，所以在后面添加了一个code组件<strong>code_7</strong></li>
-</ol>
+<li>
+<p>如下图，我设置按键组件是<strong>key_resp</strong>，所以在后面添加了一个code组件<strong>code_7</strong></p>
 <a class="lightgallery" href="/imgs/Blog_EEG_Trigger_pic4.png" title="Stimuli Mark" data-thumbnail="/imgs/Blog_EEG_Trigger_pic4.png">
-        <img
-            class="lazyload"
-            src="/svg/loading.min.svg"
-            data-src="/imgs/Blog_EEG_Trigger_pic4.png"
-            data-srcset="/imgs/Blog_EEG_Trigger_pic4.png, /imgs/Blog_EEG_Trigger_pic4.png 1.5x, /imgs/Blog_EEG_Trigger_pic4.png 2x"
-            data-sizes="auto"
-            alt="Stimuli Mark" height="300" width="600" />
-    </a>
-<ol start="2">
+           <img
+               class="lazyload"
+               src="/svg/loading.min.svg"
+               data-src="/imgs/Blog_EEG_Trigger_pic4.png"
+               data-srcset="/imgs/Blog_EEG_Trigger_pic4.png, /imgs/Blog_EEG_Trigger_pic4.png 1.5x, /imgs/Blog_EEG_Trigger_pic4.png 2x"
+               data-sizes="auto"
+               alt="Stimuli Mark" height="300" width="600" />
+       </a>
+</li>
 <li>
 <p>如下图，在<strong>code_7组件</strong>的 <strong>Begin Experiment选项卡</strong> 中输入代码：</p>
 <div class="highlight"><div class="chroma">
@@ -165,18 +174,16 @@
 <li>⚠️该代码的p_port是我随意设置的一个端口名字，但是这个名字可能会和刺激Mark中的Parallel Out组件的名字有冲突，所以建议改为p_port_99，这样就避免和其他默认的端口组件名字产生冲突。</li>
 <li>⚠️<code>address='0x3FF8'</code>这里的端口号要记得改为和设备一致的端口号。</li>
 </ul>
-</li>
-</ol>
 <a class="lightgallery" href="/imgs/Blog_EEG_Trigger_pic5.png" title="Stimuli Mark" data-thumbnail="/imgs/Blog_EEG_Trigger_pic5.png">
-        <img
-            class="lazyload"
-            src="/svg/loading.min.svg"
-            data-src="/imgs/Blog_EEG_Trigger_pic5.png"
-            data-srcset="/imgs/Blog_EEG_Trigger_pic5.png, /imgs/Blog_EEG_Trigger_pic5.png 1.5x, /imgs/Blog_EEG_Trigger_pic5.png 2x"
-            data-sizes="auto"
-            alt="Stimuli Mark" height="300" width="600" />
-    </a>
-<ol start="3">
+           <img
+               class="lazyload"
+               src="/svg/loading.min.svg"
+               data-src="/imgs/Blog_EEG_Trigger_pic5.png"
+               data-srcset="/imgs/Blog_EEG_Trigger_pic5.png, /imgs/Blog_EEG_Trigger_pic5.png 1.5x, /imgs/Blog_EEG_Trigger_pic5.png 2x"
+               data-sizes="auto"
+               alt="Stimuli Mark" height="300" width="600" />
+       </a>
+</li>
 <li>
 <p>如下图，在<strong>code_7组件</strong>的 <strong>End Routine 选项卡</strong> 中输入如下代码：</p>
 <div class="highlight"><div class="chroma">
@@ -203,17 +210,17 @@
 <li>⚠️代码中，<code>key_resp</code>是键盘组件的名称，需要和你自己的名称改为一致的</li>
 <li>⚠️p_port是 <strong>Begin Experiment选项卡</strong> 中设置的名称，这两个地方要一致，名称随意改。</li>
 </ul>
+<a class="lightgallery" href="/imgs/Blog_EEG_Trigger_pic6.png" title="Stimuli Mark" data-thumbnail="/imgs/Blog_EEG_Trigger_pic6.png">
+           <img
+               class="lazyload"
+               src="/svg/loading.min.svg"
+               data-src="/imgs/Blog_EEG_Trigger_pic6.png"
+               data-srcset="/imgs/Blog_EEG_Trigger_pic6.png, /imgs/Blog_EEG_Trigger_pic6.png 1.5x, /imgs/Blog_EEG_Trigger_pic6.png 2x"
+               data-sizes="auto"
+               alt="Stimuli Mark" height="300" width="600" />
+       </a>
 </li>
 </ol>
-<a class="lightgallery" href="/imgs/Blog_EEG_Trigger_pic6.png" title="Stimuli Mark" data-thumbnail="/imgs/Blog_EEG_Trigger_pic6.png">
-        <img
-            class="lazyload"
-            src="/svg/loading.min.svg"
-            data-src="/imgs/Blog_EEG_Trigger_pic6.png"
-            data-srcset="/imgs/Blog_EEG_Trigger_pic6.png, /imgs/Blog_EEG_Trigger_pic6.png 1.5x, /imgs/Blog_EEG_Trigger_pic6.png 2x"
-            data-sizes="auto"
-            alt="Stimuli Mark" height="300" width="600" />
-    </a>
 <hr>
 <h2 id="消除信道中的反应mark信息">消除信道中的反应Mark信息</h2>
 <blockquote>
@@ -223,18 +230,18 @@
 <p>在反应Mark出现后，消除反应Mark的通道占用。</p>
 <p><strong>操作方式：</strong></p>
 <ol>
-<li>在刺激呈现和反应的Routine后面，新增一个Routine，然后在新增的这个Routine放入一个Code组件，如图中的<strong>code_5组件</strong>，图中的图片组件是我实验设计所需，不是必须的。</li>
-</ol>
+<li>
+<p>在刺激呈现和反应的Routine后面，新增一个Routine，然后在新增的这个Routine放入一个Code组件，如图中的<strong>code_5组件</strong>，图中的图片组件是我实验设计所需，不是必须的。</p>
 <a class="lightgallery" href="/imgs/Blog_EEG_Trigger_pic7.png" title="Stimuli Mark" data-thumbnail="/imgs/Blog_EEG_Trigger_pic7.png">
-        <img
-            class="lazyload"
-            src="/svg/loading.min.svg"
-            data-src="/imgs/Blog_EEG_Trigger_pic7.png"
-            data-srcset="/imgs/Blog_EEG_Trigger_pic7.png, /imgs/Blog_EEG_Trigger_pic7.png 1.5x, /imgs/Blog_EEG_Trigger_pic7.png 2x"
-            data-sizes="auto"
-            alt="Stimuli Mark" height="300" width="600" />
-    </a>
-<ol start="2">
+           <img
+               class="lazyload"
+               src="/svg/loading.min.svg"
+               data-src="/imgs/Blog_EEG_Trigger_pic7.png"
+               data-srcset="/imgs/Blog_EEG_Trigger_pic7.png, /imgs/Blog_EEG_Trigger_pic7.png 1.5x, /imgs/Blog_EEG_Trigger_pic7.png 2x"
+               data-sizes="auto"
+               alt="Stimuli Mark" height="300" width="600" />
+       </a>
+</li>
 <li>
 <p>打开Code组件的属性设置  &mdash;&gt;  切换到  <strong>Begin Routine选项卡</strong>  &mdash;&gt;  在里面填入如下代码</p>
 <div class="highlight"><div class="chroma">
@@ -276,7 +283,7 @@
 <hr>
 </br>
 <h1 id="最后">最后</h1>
-<p>目前这种打Mark的方式，经过两次实验的测试，发现有较小几率会出现第一个Mark会掉的情况。直到现在还没有找到问题的根源。解决方法就是在实验开始的指导语的Routine中，给指导语的图片加一个parallel out组件，设置方式和刺激mark的设置方式一样，只是在<strong><ruby>数据<rt>Data</rt></ruby></strong>选项卡中，使用默认设置，即<code>1</code>，不放入我们的条件Mark进去，让这第一个Mark先出来。即使是这样，也不能完全保证第一个Mark丢失。很奇怪，经过反复测试，只丢第一个Mark，其他试次的Mark都不会丢。这个问题如果找到解决方法了，会在此更新。</p>
+<p>目前这种打Mark的方式，经过两次实验的测试，发现有较小几率会出现第一个Mark会掉的情况。直到现在还没有找到问题的根源。解决方法就是在实验开始的指导语的Routine中，给指导语的图片加一个parallel out组件，设置方式和刺激mark的设置方式一样，只是在<strong><ruby>数据<rt>Data</rt></ruby></strong>选项卡中，<strong>Start data</strong>使用默认设置，即<code>1</code>，不放入我们的条件Mark进去，让这第一个Mark先出来。即使是这样，也不能完全保证第一个Mark丢失。很奇怪，经过反复测试，只丢第一个Mark，其他试次的Mark都不会丢。这个问题如果找到解决方法了，会在此更新。</p>
 </div><div class="post-footer" id="post-footer">
     <div class="post-info">
         <div class="post-info-line">
