@@ -13,7 +13,7 @@
 
 **实现目标：**
 
-如图，需要打mark的刺激是**SCREEN_3**这个组件，这个组件的内容出现，mark就要出现。
+<u>如下图</u>，需要打mark的刺激是**SCREEN_3**这个组件，这个组件的内容出现，mark就要出现。
 
 {{< image src="/imgs/Blog_EEG_Trigger_pic1.png" alt="Stimuli Mark" width="600" height="300">}}
 
@@ -21,12 +21,12 @@
 
 1. 在**SCREEN_3**组件下方添加一个 **Parallel Out** 并行端口组件（Builder窗口下，右边Component选项卡 --> EEG选项卡 --> Parallel Out），如上图，`p_port_2`是我添加的并行端口组件
 2. 点开`p_port_2`组件的属性选择 ---> [基础]^(Basic)选项卡中--->**Start**，即**Mark**的开始方式。在下拉选项卡中选则[条件]^(condition)，在后方加入代码：`$SCREEN_3.status==STARTED`。表示**SCREEN_3组件**一开始，**p_port_2组件**就发送Mark
-3. 在**Start**的下方**Stop**，将[持续时间]^(duration time)改为0.1，即100ms。这个持续时间建议不低于0.016秒，即60Hz刷新率下的一帧的时间。
-4. 然后在[数据]^(data)选项卡中 ---> **Start data**的框内，输入你条件文件中指代Mark对应的变量名，如下图，我在excel文件中，有一列变量为Mark类型，这一列的名字为condition_type，把这个列名放在这里即可。**Stop data**框内保持默认`0`
+3. 在**Start**的下方**Stop**，将[持续时间]^(duration time)改为0.1，即100ms。这个持续时间建议不低于0.016秒，即60Hz刷新率屏幕，一帧的时间。
+4. 然后在[数据]^(data)选项卡中 ---> **Start data**的框内，输入你条件文件中指代Mark对应的变量名，<u>如下图</u>，我在excel文件中，有一列变量为Mark类型，这一列的名字为condition_type，把这个列名放在这里即可。**Stop data**框内保持默认`0`
 
 {{< image src="/imgs/Blog_EEG_Trigger_pic2.png" alt="Stimuli Mark" width="600" height="300">}}
 
-5. 然后切换到[硬件]^(hardware)选项卡 ---> **Port address**位置选择设备对应的**端口号**
+5. <u>如下图</u>，然后切换到[硬件]^(hardware)选项卡 ---> **Port address**位置选择设备对应的**端口号**
 
    {{< image src="/imgs/Blog_EEG_Trigger_pic3.png" alt="Stimuli Mark" width="600" height="300">}}
    
@@ -52,17 +52,17 @@
 
 **操作方式：**
 
-1. 如下图，我设置按键组件是**key_resp**，所以在后面添加了一个code组件**code_7**
+1. <u>如下图</u>，我设置按键组件是**key_resp**，所以在后面添加了一个code组件**code_7**
 
    {{< image src="/imgs/Blog_EEG_Trigger_pic4.png" alt="Stimuli Mark" width="600" height="300">}}
 
-2. 如下图，在**code_7组件**的 **Begin Experiment选项卡** 中输入代码：
+2. <u>如下图</u>，在**code_7组件**的 **Begin Experiment选项卡** 中输入代码：
 
    ```python
    p_port = parallel.ParallelPort(address='0x3FF8')
    ```
 
-   - ⚠️该代码的p_port是我随意设置的一个端口名字，但是这个名字可能会和刺激Mark中的Parallel Out组件的名字有冲突，所以建议改为p_port_99，这样就避免和其他默认的端口组件名字产生冲突。
+   - ⚠️该代码的**p_port**是我随意设置的一个端口名字，但是这个名字可能会和刺激Mark中的**Parallel Out组件**的名字有冲突，所以建议改为**p_port_99**，这样就避免和其他默认的端口组件名字产生冲突。
 
    - ⚠️`address='0x3FF8'`这里的端口号要记得改为和设备一致的端口号
 
@@ -70,7 +70,7 @@
 
    {{< image src="/imgs/Blog_EEG_Trigger_pic5.png" alt="Stimuli Mark" width="600" height="300">}}
 
-3. 如下图，在**code_7组件**的 **End Routine 选项卡** 中输入如下代码：
+3. <u>如下图</u>，在**code_7组件**的 **End Routine 选项卡** 中输入如下代码：
 
    ```python
    if key_resp.corr == 1:
@@ -99,11 +99,11 @@
 
 **操作方式：**
 
-1. 在刺激呈现和反应的Routine后面，新增一个Routine，然后在新增的这个Routine放入一个Code组件，如图中的**code_5组件**，图中的图片组件是我实验设计所需，不是必须的。
+1. 在刺激呈现和反应的Routine后面，新增一个Routine，然后在新增的这个Routine放入一个Code组件，<u>如下图</u>中的**code_5组件**，图中的图片组件是我实验设计所需，不是必须的。
 
    {{< image src="/imgs/Blog_EEG_Trigger_pic7.png" alt="Stimuli Mark" width="600" height="300">}}
 
-2. 打开Code组件的属性设置  --->  切换到  **Begin Routine选项卡**  --->  在里面填入如下代码
+2. <u>如下图</u>，打开Code组件的属性设置  --->  切换到  **Begin Routine选项卡**  --->  在里面填入如下代码
 
    ```python
    t_port = tThisFlipGlobal
@@ -111,16 +111,18 @@
 
    这个表示获取当前的时间
 
-   {{< image src="/imgs/Blog_EEG_Trigger_pic7.png" alt="Stimuli Mark" width="600" height="300">}}
+   {{< image src="/imgs/Blog_EEG_Trigger_pic8.png" alt="Stimuli Mark" width="600" height="300">}}
 
-3. 切换到  **Each Frame选项卡**  --->  在里面填入如下代码
+3. <u>如下图</u>，切换到  **Each Frame选项卡**  --->  在里面填入如下代码
 
    ```python
    if tThisFlipGlobal > t_port + 0.1 - frameTolerance:
        p_port.setData(0)
    ```
 
-   这个代码表示，如果当前时间达到0.1秒，就执行`p_port.setData(0)`，即把p_port端口归零，设置停止数据。这里的p_port就是设置反应Mark的代码中设置的p_port，两个地方的名称要统一。代码中的`0.1`可以改为0.016及以上的时间，单位为秒。
+   这个代码表示，如果当前时间达到0.1秒，就执行`p_port.setData(0)`，即把**p_port**端口归零，设置停止数据。这里的**p_port**就是设置反应Mark的代码中设置的**p_port**，两个地方的名称要统一。代码中的`0.1`可以改为0.016及以上的时间，单位为秒。
+   
+   {{< image src="/imgs/Blog_EEG_Trigger_pic9.png" alt="Stimuli Mark" width="600" height="300">}}
 
 ---
 
@@ -132,5 +134,5 @@
 
 # 最后
 
-目前这种打Mark的方式，经过两次实验的测试，发现有较小几率会出现第一个Mark丢失的情况。直到现在还没有找到问题的根源。解决方法就是在实验开始的指导语的Routine中，给指导语的图片加一个parallel out组件，设置方式和刺激mark的设置方式一样，只是在[数据]^(Data)选项卡中，**Start data**使用默认设置，即`1`，不放入我们的条件Mark进去，让这第一个Mark先出来。即使是这样，也不能完全保证第一个Mark丢失。很奇怪，经过反复测试，只丢第一个Mark，其他试次的Mark都不会丢。这个问题如果找到解决方法了，会在此更新。
+目前这种打Mark的方式，经过两次实验的测试，发现有较小几率会出现第一个Mark丢失的情况。直到现在还没有找到问题的根源。解决方法就是在实验开始的指导语的Routine中，给指导语的图片加一个**parallel out组件**，设置方式和刺激mark的设置方式一样，只是在[数据]^(Data)选项卡中，**`Start data`**使用默认设置，即`1`，不放入我们的条件Mark进去，让这第一个Mark先出来。即使是这样，也不能完全保证第一个Mark丢失。很奇怪，经过反复测试，只丢第一个Mark，其他试次的Mark都不会丢。这个问题如果找到解决方法了，会在此更新。
 
