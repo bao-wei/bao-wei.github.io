@@ -72,7 +72,7 @@
 
 3. 如下图，在**code_7组件**的 **End Routine 选项卡** 中输入如下代码：
 
-   ```
+   ```python
    if key_resp.corr == 1:
        p_port.setData(88)
    if key_resp.corr == 0:

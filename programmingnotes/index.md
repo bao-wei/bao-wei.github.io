@@ -63,7 +63,7 @@ if practice_key_resp_stroop.corr == 0:
 
 **右侧的js窗口输入**：
 
-```js
+```javascript
 if ((practice_key_resp_stroop.corr === 1)) {
     fb_text = "\u2714";
     fb_col = "green";

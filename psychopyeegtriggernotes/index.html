@@ -202,13 +202,13 @@
 </span><span class="lnt">7
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">if key_resp.corr == 1:
-</span></span><span class="line"><span class="cl">    p_port.setData(88)
-</span></span><span class="line"><span class="cl">if key_resp.corr == 0:
-</span></span><span class="line"><span class="cl">    if key_resp.keys == None:
-</span></span><span class="line"><span class="cl">        p_port.setData(90)
-</span></span><span class="line"><span class="cl">    else:
-</span></span><span class="line"><span class="cl">        p_port.setData(99)
+<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="k">if</span> <span class="n">key_resp</span><span class="o">.</span><span class="n">corr</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">    <span class="n">p_port</span><span class="o">.</span><span class="n">setData</span><span class="p">(</span><span class="mi">88</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="k">if</span> <span class="n">key_resp</span><span class="o">.</span><span class="n">corr</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">    <span class="k">if</span> <span class="n">key_resp</span><span class="o">.</span><span class="n">keys</span> <span class="o">==</span> <span class="kc">None</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">        <span class="n">p_port</span><span class="o">.</span><span class="n">setData</span><span class="p">(</span><span class="mi">90</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="k">else</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">        <span class="n">p_port</span><span class="o">.</span><span class="n">setData</span><span class="p">(</span><span class="mi">99</span><span class="p">)</span>
 </span></span></code></pre></td></tr></table>
 </div>
 </div><ul>
