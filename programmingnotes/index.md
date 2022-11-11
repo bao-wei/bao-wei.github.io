@@ -3,6 +3,8 @@
 
 </br>
 
+# Online and Offline Experiment
+
 {{< admonition type=tip title="Tip 1: 达到正确率后通过练习" open=false >}}
 
 {{< link href="https://www.jianshu.com/p/9d562d34d5ec" content=练习返回code组件代码设置 >}}
@@ -15,14 +17,14 @@
 
 设置被试主动重复练习的按键，即达到正确率后仍然想再次练习。在[计算练习正确率code组件]^(Tip 1 中的最后一个code组件)中的`begin routine`和`end routine`部分中增加代码。
 
-**begin routine部分**：
+**Begin routine部分**：
 
 ```python
 if number_correct/(practice_trials.nTotal + 1) >= 0.80:
     end_practice.setText("练习结束\n按[空格]键开始正式实验\n按[B]键重新练习")
 ```
 
-**end routine部分**：
+**End routine部分**：
 
 ```python
 if number_correct/(practice_trials.nTotal + 1) >= 0.80:
@@ -36,31 +38,11 @@ if number_correct/(practice_trials.nTotal + 1) >= 0.80:
 
 {{< /admonition >}}
 
-{{< admonition type=tip title="Tip 3: 在线运行错误可能原因" open=false >}}
-
-在网页运行的时候要关闭阻止广告插件、油猴脚本等插件，会导致程序运行不正确
-
-{{< /admonition >}}
-
-{{< admonition type=tip title="Tip 4: PC端无法同步到网页端解决方法" open=false >}}
-
-同步本地和线上程序时，如果直接同步不可用，可以搜索在线程序来同步（**<font color=#55bde2>注意，同步要同步两次，同步一次可能不会生效</font>**）。方法如下：
-
-通过build界面`在线搜索`功能解决无法同步程序到网页端的方法：{{< link "https://psychopy.org/online/sharingExperiments.html" >}}
-
-{{< /admonition >}}
-
-{{< admonition type=tip title="Tip 5: Python代码和Js代码都要检查" open=false >}}
-
-如果本地端能运行，但网页端不能运行，说明生成的psychojs代码不对。修改的每一个地方都要对照python和js的代码来修改，有的python代码不一定适用于js代码，所以要根据python的意思来修改js的代码，才能让网页端程序正常运行，如 **<font color=#55bde2>Tip 6</font>** 中的例子。
-
-{{< /admonition >}}
-
-{{< admonition type=tip title="Tip 6: 在练习中增加反馈" open=false >}}
+{{< admonition type=tip title="Tip 3: 在练习中增加反馈" open=false >}}
 
 **方法**：单个trial的组件一般放在同一个routine中(如图中`practice_stroop`)，反馈就单独新建一个routine放在trial routine后，即被试按键后判断后(如图中`feedback_stroop`)。在`feedback_stroop`中有两个组件，首先是`code_3`组件，用于判断正确错误，然后是text文字组件`fb_2`，用于呈现反馈的文字，文字组件中的内容部分输入`$fb_text`，这样`code_3`组件生成的反馈内容就在文字组件中呈现。如下图：
 
-{{< image src="/imgs/tip6_routine.png" alt="Tip 6" width="600" height="300">}}
+{{< image src="/imgs/tip6_routine.png" alt="Tip 3" width="600" height="300">}}
 
 在这个`feedback_stroop`Routine中增加一个`code_3`组件(名称随意)，将组件的[语言方式设置为both]^(默认是Auto->js)，在其中的**begin routine**部分增加如下代码：
 
@@ -103,49 +85,25 @@ if ((practice_key_resp_stroop.corr === 0)) {
 
 {{< /admonition >}}
 
-{{< admonition type=tip title="Tip 7: 同步前要先生成js代码" open=false >}}
-
-每次修改完build界面的程序，在同步到网页端前，**<font color=#55bde2>都要生成一次js代码，然后保存js代码</font>**，这样build的修改才会在js代码里面生效，不然build界面的修改是不会自动同步到js代码里的！！！！！
-
-{{< /admonition >}}
-
-{{< admonition type=tip title="Tip 8: 同步前要关闭网络代理" open=false >}}
-
-同步时要关闭电脑上的网络代理工具，不然会导致网络连接失败
-
-{{< /admonition >}}
-
-{{< admonition type=tip title="Tip 9: 屏幕刷新率和刺激呈现时间" open=false >}}
+{{< admonition type=tip title="Tip 4: 屏幕刷新率和刺激呈现时间" open=false >}}
 
 刺激呈现时间t=[N(帧数)]/[60Hz(刷新率)]，最短时间是28.67ms（60hz的显示器两帧之间的时间约等于16.67ms，屏幕自上而下刷新一次大概12ms（源自：《实验编程：psychopy从入门到精通》第十二章第一节）
 
 {{< /admonition >}}
 
-{{< admonition type=tip title="Tip 10: 从正式试次中随机选取10试次练习" open=false >}}
+{{< admonition type=tip title="Tip 5: 从正式试次中随机选取10试次练习" open=false >}}
 
 例如：从108试次里面随机抽取10试次进行练习，在trials循环层面的`select rows`位置填入代码：`$random(10)*108`，然后condition文件选择正式实验的excel文件即可。(不推荐这个方法，建议另外创建练习的condition表格文件，尽量把每个条件都选1到2个试次进行练习，这样更平衡。)
 
 {{< /admonition >}}
 
-{{< admonition type=tip title="Tip 11: 同步时可能出现的问题" open=false >}}
-
-同步时，要关闭所有需要上传的文件，不然可能会因为文件被程序占用导致上传报错
-
-{{< /admonition >}}
-
-{{< admonition type=tip title="Tip 12: 网页端的修改没有生效" open=false >}}
-
-当仓库显示上传成功时（根据更新时间判断），如果在网页端的控制台piloting实验时发现修改没有生效，说明浏览器缓存没有更新，要么清除浏览器缓存的cookie以及历史记录（近一小时或最近的即可），要么换个浏览器piloting
-
-{{< /admonition >}}
-
-{{< admonition type=tip title="Tip 13: 数字格式的刺激呈现问题" open=false >}}
+{{< admonition type=tip title="Tip 6: 数字格式的刺激呈现问题" open=false >}}
 
 所有数字不能是“**以数字形式储存文本**”的形式在excel表格中，不然psychopy会把这个识别为数字，在excel中设置为“常规”格式即可，然后psychopy中用`str()`转换为字符即可(括号内为刺激条件名称)
 
 {{< /admonition >}}
 
-{{< admonition type=tip title="Tip 14: 刺激大小/视角" open=false >}}
+{{< admonition type=tip title="Tip 7: 刺激大小/视角" open=false >}}
 
 > Psychopy的默认单位是height，这个单位的好处是能够根据屏幕的大小自动适配刺激大小，不会因屏幕分辨率不同造成刺激大小不同。
 >
@@ -172,7 +130,65 @@ if ((practice_key_resp_stroop.corr === 0)) {
 
 {{< /admonition >}}
 
-{{< admonition type=tip title="Tip 15: ⭐本地端和网页端加载资源方式" open=false >}}
+{{< admonition type=tip title="Tip 8: 随机刺激屏的方式" open=false >}}
+
+例如：随机300-500ms
+
+```python
+0.3+0.2*random()
+```
+
+{{< image src="/imgs/random_stimuli.png" alt="random_time" width="600" height="300">}}
+
+{{< /admonition >}}
+
+# Online Experiment 
+
+{{< admonition type=tip title="Tip 1: 在线运行错误可能原因" open=false >}}
+
+在网页运行的时候要关闭阻止广告插件、油猴脚本等插件，会导致程序运行不正确
+
+{{< /admonition >}}
+
+{{< admonition type=tip title="Tip 2: PC端无法同步到网页端解决方法" open=false >}}
+
+同步本地和线上程序时，如果直接同步不可用，可以搜索在线程序来同步（**<font color=#55bde2>注意，同步要同步两次，同步一次可能不会生效</font>**）。方法如下：
+
+通过build界面`在线搜索`功能解决无法同步程序到网页端的方法：{{< link "https://psychopy.org/online/sharingExperiments.html" >}}
+
+{{< /admonition >}}
+
+{{< admonition type=tip title="Tip 3: Python代码和Js代码都要检查" open=false >}}
+
+如果本地端能运行，但网页端不能运行，说明生成的psychojs代码不对。修改的每一个地方都要对照python和js的代码来修改，有的python代码不一定适用于js代码，所以要根据python的意思来修改js的代码，才能让网页端程序正常运行，如 **<font color=#55bde2>Online and Offline Experiment Tip 3</font>** 中的例子。
+
+{{< /admonition >}}
+
+{{< admonition type=tip title="Tip 4: 同步前要先生成js代码" open=false >}}
+
+每次修改完build界面的程序，在同步到网页端前，**<font color=#55bde2>都要生成一次js代码，然后保存js代码</font>**，这样build的修改才会在js代码里面生效，不然build界面的修改是不会自动同步到js代码里的！！！！！
+
+{{< /admonition >}}
+
+{{< admonition type=tip title="Tip 5: 同步前要关闭网络代理" open=false >}}
+
+同步时要关闭电脑上的网络代理工具，不然会导致网络连接失败
+
+{{< /admonition >}}
+
+{{< admonition type=tip title="Tip 6: 同步时可能出现的问题" open=false >}}
+
+同步时，要关闭所有需要上传的文件，不然可能会因为文件被程序占用导致上传报错
+
+{{< /admonition >}}
+
+{{< admonition type=tip title="Tip 7: 网页端的修改没有生效" open=false >}}
+
+当仓库显示上传成功时（根据更新时间判断），如果在网页端的控制台piloting实验时发现修改没有生效，说明浏览器缓存没有更新，要么清除浏览器缓存的cookie以及历史记录（近一小时或最近的即可），要么换个浏览器piloting
+
+{{< /admonition >}}
+
+{{< admonition type=tip title="Tip 8: ⭐本地端和网页端加载资源方式" open=false >}}
 
 如果在本地增加了新的文件夹存放图片或excel条件文件，要提前在**build界面**的**全局设置**中，**online选项卡**下添加这些resources，不然加载图片或条件会报错，提示无法加载相应的材料(如下图)
 
@@ -180,7 +196,7 @@ if ((practice_key_resp_stroop.corr === 0)) {
 
 {{< /admonition >}}
 
-{{< admonition type=tip title="Tip 16: ⭐打开在线实验卡在：Initialising experiment白屏" open=false >}}
+{{< admonition type=tip title="Tip 9: ⭐打开在线实验卡在：Initialising experiment白屏" open=false >}}
 
 在这里先打开浏览器的开发者选项查看报错是什么，Chrome和Edge浏览器是按住`Ctrl+Shift`再按`I`。如果报错是connection相关的，那就可以参考下方的解决方法，如果报错是syntax相关的，那就参考这个[解决方法](https://psychopy.org/online/psychoJSCodingDebugging.html#launch-errors-stuck-on-initialising-the-experiment)
 
@@ -197,6 +213,124 @@ if ((practice_key_resp_stroop.corr === 0)) {
   {{< image src="/imgs/index_jsdeliver.png" alt="index_html" width="600" height="300">}}
 
 - 这个的原理就是换一个开源代码的源，其他源可以参考这个知乎回答：[jsdelivr cdn报错无法访问](https://zhuanlan.zhihu.com/p/447713250)
+
+{{< /admonition >}}
+
+{{< admonition type=tip title="Tip 10: ⭐在线实验记录IP地址" open=false >}}
+
+在线实验存在一个被试重复多次参加的情况，为了避免这种问题造成数据质量下降，可以增加获取IP地址来对数据进行检查，辅助判别是不是有重复参加实验的被试。
+
+[参考原帖](https://discourse.psychopy.org/t/how-to-get-the-ip-address-of-the-participant/11675/4)
+
+在程序的开头，增加一个Code组件，然后在Begin Experiment加上如下代码，代码的模式设置为`both`，代码只放右边JS部分，左边python部分为空(**参考下图**)：
+
+```javascript
+  $.getJSON('https://api.ipify.org?format=json', function(data){
+
+    console.log(data.ip);
+    localStorage.setItem('ip',data.ip);
+
+    psychoJS.experiment.addData('IP_Addresss', data.ip)
+
+  });
+```
+
+{{< image src="/imgs/psychopy_get_IP.png" alt="get_IP_code" width="600" height="300">}}
+
+{{< /admonition >}}
+
+{{< admonition type=tip title="Tip 11: ⭐增加中途休息" open=false >}}
+
+在单个试次的`loop`下，新增一个`routine`，在这个`routine`中添加一个code组件，在里面的`begin routine`下增加如下代码：
+
+```python
+if trials.thisTrialN==191 or trials.thisTrialN==383:
+    continueRoutine = True
+else:
+    continueRoutine = False
+```
+
+⚠️`trials.thisTrialN`中的trials要根据loop的名称对应修改，因为我设置的loop名称为`trials`，如果loop名称为`trials_stroop`，那就要修改为`trials_stroop.thisTrialN`。
+
+代码解释：如果试次数达到191或383，则运行该Routine，其他试次则不运行。运行该Routine时，则弹出文字“请休息一下，按空格键继续”。如下图。
+
+{{< image src="/imgs/psychopy_rest.png" alt="rest_code_1" width="600" height="300">}}
+
+{{< image src="/imgs/psychopy_rest2.png" alt="rest_code_2" width="600" height="300">}}
+
+{{< image src="/imgs/psychopy_rest3.png" alt="rest_code_3" width="600" height="300">}}
+
+{{< /admonition >}}
+
+# Offline Experiment
+
+{{< admonition type=tip title="Tip 1: ⭐按键平衡代码" open=false >}}
+
+1. 在程序指导语处加一个code组件
+
+2. 在code组件的  **Before Experiment选项卡**  中放入代码：
+
+   ```python
+   import re # 导入re模块
+   ```
+
+3. 在code组件的  **Begin Experiment选项卡**  中放入代码：
+
+   ```python
+   sub_name = expInfo['participant']
+   sub = re.findall(r"\d+\.?\d*", sub_name)
+   sub_num = int(sub[0])
+   if (sub_num % 2) == 0:
+       keybalance = "2"
+   else:
+       keybalance = "1"
+   ```
+
+**第3步代码解释：**
+
+以字符串和数字组合为例，如被试号：`S20`
+
+```python
+# 将被试信息participant作为按键平衡的信息输入，输入方式为S1、S2等。
+sub_name = expInfo['participant']
+```
+
+分离字符`S`和数字`20`
+
+```python
+# 将字符 S 和 数字 20 分离，得到数字
+# python提取字符串中的数字，参考：https://blog.csdn.net/qq_38486203/article/details/80309478
+sub = re.findall(r"\d+\.?\d*", sub_name)	
+```
+
+然后用 `sub_num % 2 == 0` 的表达方式判断奇偶，进行按键平衡
+
+```python
+# 参考：https://discourse.psychopy.org/t/using-an-if-statement-to-create-counter-balancing-online/20653
+sub_num = int(sub[0])
+if (sub_num % 2) == 0:
+    keybalance = "2"
+else:
+    keybalance = "1"
+```
+
+---
+
+参考：
+
+[python 从字符串中提取数字](https://blog.csdn.net/weixin_44178960/article/details/117266731)
+
+[python从字符串中提取数字](https://blog.csdn.net/qq_38486203/article/details/80309478)
+
+---
+
+*这个方法没有在线上实验程序中尝试，因为本地运行时，代码`import re`在自动转换成js代码时会报错。因为编写的程序是线下版，就没有测试线上程序。后续这个功能会加入到线上程序中，然后更新本文内容*。
+
+{{< /admonition >}}
+
+{{< admonition type=tip title="Tip 2: 单独提取某一列进行随机" open=false >}}
+
+[参考文章](https://discourse.psychopy.org/t/simultaneously-randomize-two-columns-in-conditions-file/22635/4)
 
 {{< /admonition >}}
 

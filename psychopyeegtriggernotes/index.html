@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="robots" content="noodp" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+        <title>Psychopy EEG Trigger Notes - Bao Wei | A Psychologyer</title><meta name="Description" content="A PSYCHOLOGYER"><meta property="og:title" content="Psychopy EEG Trigger Notes" />
+<meta property="og:description" content="本文介绍的是并行端口(Parallel Port)的打Mark方式，串行端口(Series Port)的方式大同小异，可参考：Sending triggers via" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://bao-wei.github.io/psychopyeegtriggernotes/" /><meta property="og:image" content="https://bao-wei.github.io/logo.jpg"/><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2022-11-11T15:52:39+08:00" />
+<meta property="article:modified_time" content="2022-11-11T00:00:00+00:00" />
+
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content="https://bao-wei.github.io/logo.jpg"/>
+
+<meta name="twitter:title" content="Psychopy EEG Trigger Notes"/>
+<meta name="twitter:description" content="本文介绍的是并行端口(Parallel Port)的打Mark方式，串行端口(Series Port)的方式大同小异，可参考：Sending triggers via"/>
+<meta name="application-name" content="Bao Wei | A Psychologyer">
+<meta name="apple-mobile-web-app-title" content="Bao Wei | A Psychologyer"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="https://bao-wei.github.io/psychopyeegtriggernotes/" /><link rel="prev" href="https://bao-wei.github.io/researcherofinterest/" /><link rel="next" href="https://bao-wei.github.io/pacificrimpsychology/" /><link rel="stylesheet" href="/lib/normalize/normalize.min.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"><link rel="stylesheet" href="/lib/animate/animate.min.css"><meta name="google-site-verification" content="3p1fbLdvWsgyb3rQZasknsE6JUPCcBATdcdoNPxF27U" /><script type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "headline": "Psychopy EEG Trigger Notes",
+        "inLanguage": "en",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https:\/\/bao-wei.github.io\/psychopyeegtriggernotes\/"
+        },"genre": "posts","wordcount":  2094 ,
+        "url": "https:\/\/bao-wei.github.io\/psychopyeegtriggernotes\/","datePublished": "2022-11-11T15:52:39+08:00","dateModified": "2022-11-11T00:00:00+00:00","publisher": {
+            "@type": "Organization",
+            "name": "Bao Wei"},"author": {
+                "@type": "Person",
+                "name": "Bao Wei"
+            },"description": ""
+    }
+    </script></head>
+    <body header-desktop="fixed" header-mobile="auto"><script type="text/javascript">(window.localStorage && localStorage.getItem('theme') ? localStorage.getItem('theme') === 'dark' : ('light' === 'auto' ? window.matchMedia('(prefers-color-scheme: dark)').matches : 'light' === 'dark')) && document.body.setAttribute('theme', 'dark');</script>
+
+        <div id="mask"></div><div class="wrapper"><header class="desktop" id="header-desktop">
+    <div class="header-wrapper">
+        <div class="header-title">
+            <a href="/" title="Bao Wei | A Psychologyer"><span class="header-title-pre"><i class='fas fa-glasses fa-fw'></i></span>BaoWei&#39;s Blog</a>
+        </div>
+        <div class="menu">
+            <div class="menu-inner"><a class="menu-item" href="/about/"> About me </a><a class="menu-item" href="/categories/"> Categories </a><a class="menu-item" href="/tags/"> Tags </a><a class="menu-item" href="/"> Home </a><span class="menu-item delimiter"></span><a href="javascript:void(0);" class="menu-item theme-switch" title="Switch Theme">
+                    <i class="fas fa-adjust fa-fw"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+</header><header class="mobile" id="header-mobile">
+    <div class="header-container">
+        <div class="header-wrapper">
+            <div class="header-title">
+                <a href="/" title="Bao Wei | A Psychologyer"><span class="header-title-pre"><i class='fas fa-glasses fa-fw'></i></span>BaoWei&#39;s Blog</a>
+            </div>
+            <div class="menu-toggle" id="menu-toggle-mobile">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+        <div class="menu" id="menu-mobile"><a class="menu-item" href="/about/" title="">About me</a><a class="menu-item" href="/categories/" title="">Categories</a><a class="menu-item" href="/tags/" title="">Tags</a><a class="menu-item" href="/" title="">Home</a><a href="javascript:void(0);" class="menu-item theme-switch" title="Switch Theme">
+                <i class="fas fa-adjust fa-fw"></i>
+            </a></div>
+    </div>
+</header>
+<div class="search-dropdown desktop">
+    <div id="search-dropdown-desktop"></div>
+</div>
+<div class="search-dropdown mobile">
+    <div id="search-dropdown-mobile"></div>
+</div>
+<main class="main">
+                <div class="container"><article class="page single"><h1 class="single-title animated flipInX">Psychopy EEG Trigger Notes</h1><div class="post-meta">
+            <div class="post-meta-line"><span class="post-author"><a href="/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>Bao Wei</a></span>&nbsp;<span class="post-category">included in <a href="/categories/blog/"><i class="far fa-folder fa-fw"></i>Blog</a></span></div>
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2022-11-11">2022-11-11</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;2094 words&nbsp;
+                <i class="far fa-clock fa-fw"></i>&nbsp;5 minutes&nbsp;</div>
+        </div><div class="content" id="content"></br>
+<blockquote>
+<p>本文介绍的是并行端口(Parallel Port)的打Mark方式，串行端口(Series Port)的方式大同小异，可参考：<a href="https://psychopy.org/hardware/serialPortInstr.html" target="_blank" rel="noopener noreffer">Sending triggers via a Serial Port</a></p>
+<p>如果你还不清楚什么是并口和串口，可学习：<a href="https://mp.weixin.qq.com/s/g0blLnv6EiQOt1YTfK2dtg" target="_blank" rel="noopener noreffer">你可知道：并口与串口的区别</a></p>
+<p>正式开始前，你还需要检查你的设备是否已经正确配置了打开端口的必要环境，可参考：<a href="https://psychopy.org/hardware/parallelPortInstr.html#step-two-make-sure-you-have-the-correct-drivers-installed" target="_blank" rel="noopener noreffer">Make sure you have the correct drivers installed</a>、<a href="https://zhuanlan.zhihu.com/p/84134816" target="_blank" rel="noopener noreffer">EEG实验中Matlab并口数据位发送和接收的实现方法</a></p>
+</blockquote>
+<h1 id="刺激mark加入方式">刺激Mark加入方式</h1>
+<p><strong>实现目标：</strong></p>
+<p>如图，需要打mark的刺激是<strong>SCREEN_3</strong>这个组件，这个组件的内容出现，mark就要出现。</p>
+<a class="lightgallery" href="/imgs/Blog_EEG_Trigger_pic1.png" title="Stimuli Mark" data-thumbnail="/imgs/Blog_EEG_Trigger_pic1.png">
+        <img
+            class="lazyload"
+            src="/svg/loading.min.svg"
+            data-src="/imgs/Blog_EEG_Trigger_pic1.png"
+            data-srcset="/imgs/Blog_EEG_Trigger_pic1.png, /imgs/Blog_EEG_Trigger_pic1.png 1.5x, /imgs/Blog_EEG_Trigger_pic1.png 2x"
+            data-sizes="auto"
+            alt="Stimuli Mark" height="300" width="600" />
+    </a>
+<p><strong>操作方式：</strong></p>
+<ol>
+<li>在<strong>SCREEN_3</strong>组件下方添加一个 <strong>Parallel Out</strong> 并行端口组件（Builder窗口下，右边Component选项卡 &ndash;&gt; EEG选项卡 &ndash;&gt; Parallel Out），如上图，<code>p_port_2</code>是我添加的并行端口组件</li>
+<li>点开<code>p_port_2</code>组件的属性选择 &mdash;&gt; <strong><ruby>基础<rt>Basic</rt></ruby></strong>选项卡中&mdash;&gt;<strong>Start</strong>，即<strong>Mark</strong>的开始方式。在下拉选项卡中选则<strong><ruby>条件<rt>condition</rt></ruby></strong>，在后方加入代码：<code>$SCREEN_3.status==STARTED</code>。表示<strong>SCREEN_3组件</strong>一开始，<strong>p_port_2组件</strong>就发送Mark</li>
+<li>在Stop中，将<strong><ruby>持续时间<rt>duration time</rt></ruby></strong>改为0.1，即100ms。这个持续时间建议不低于0.016秒，即60Hz刷新率下的一帧的时间。</li>
+<li>然后在<strong><ruby>数据<rt>data</rt></ruby></strong>选项卡中 &mdash;&gt; Start data的框内，输入你条件文件中指代Mark对应的变量名，如下图，我在excel文件中，有一列变量为Mark类型，这一列的名字为condition_type，把这个列名放在这里即可。</li>
+</ol>
+<a class="lightgallery" href="/imgs/Blog_EEG_Trigger_pic1.png" title="Stimuli Mark" data-thumbnail="/imgs/Blog_EEG_Trigger_pic1.png">
+        <img
+            class="lazyload"
+            src="/svg/loading.min.svg"
+            data-src="/imgs/Blog_EEG_Trigger_pic1.png"
+            data-srcset="/imgs/Blog_EEG_Trigger_pic1.png, /imgs/Blog_EEG_Trigger_pic1.png 1.5x, /imgs/Blog_EEG_Trigger_pic1.png 2x"
+            data-sizes="auto"
+            alt="Stimuli Mark" height="300" width="600" />
+    </a>
+<ol start="5">
+<li>
+<p>然后切换到<strong><ruby>硬件<rt>hardware</rt></ruby></strong>选项卡 &mdash;&gt; <strong>Port address</strong>位置选择设备对应的<strong>端口号</strong></p>
+<p>如果没有你设备的端口号，就需要手动添加 &mdash;&gt; <a href="https://psychopy.org/hardware/parallelPortInstr.html" target="_blank" rel="noopener noreffer">添加方法</a></p>
+</li>
+</ol>
+<hr>
+<p>至此，刺激mark的设置完毕。</p>
+</br>
+<h1 id="反应mark加入方式">反应Mark加入方式</h1>
+<blockquote>
+<p>反应Mark涉及到根据被试的按键正确和错误判断出现的Mark代码，所以就没法使用 <strong>Parallel Out 组件</strong> 来实现，只有使用 <strong>Code 组件</strong> 来实现，原理和E-prime的方式有些类似。</p>
+</blockquote>
+<p><strong>实现目标：</strong></p>
+<ul>
+<li>
+<p>被试按键判断：正确 &mdash;&gt; 出现Mark  88</p>
+</li>
+<li>
+<p>被试按键判断：错误 &mdash;&gt; 出现Mark  99</p>
+</li>
+<li>
+<p>被试按键判断：无反应 &mdash;&gt; 出现Mark  90</p>
+</li>
+</ul>
+<p><strong>操作方式：</strong></p>
+<ol>
+<li>如下图，我设置按键组件是<strong>key_resp</strong>，所以在后面添加了一个code组件<strong>code_7</strong></li>
+</ol>
+<a class="lightgallery" href="/imgs/Blog_EEG_Trigger_pic4.png" title="Stimuli Mark" data-thumbnail="/imgs/Blog_EEG_Trigger_pic4.png">
+        <img
+            class="lazyload"
+            src="/svg/loading.min.svg"
+            data-src="/imgs/Blog_EEG_Trigger_pic4.png"
+            data-srcset="/imgs/Blog_EEG_Trigger_pic4.png, /imgs/Blog_EEG_Trigger_pic4.png 1.5x, /imgs/Blog_EEG_Trigger_pic4.png 2x"
+            data-sizes="auto"
+            alt="Stimuli Mark" height="300" width="600" />
+    </a>
+<ol start="2">
+<li>
+<p>如下图，在<strong>code_7组件</strong>的 <strong>Begin Experiment选项卡</strong> 中输入代码：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">p_port</span> <span class="o">=</span> <span class="n">parallel</span><span class="o">.</span><span class="n">ParallelPort</span><span class="p">(</span><span class="n">address</span><span class="o">=</span><span class="s1">&#39;0x3FF8&#39;</span><span class="p">)</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><ul>
+<li>⚠️该代码的p_port是我随意设置的一个端口名字，但是这个名字可能会和刺激Mark中的Parallel Out组件的名字有冲突，所以建议改为p_port_99，这样就避免和其他默认的端口组件名字产生冲突。</li>
+<li>⚠️<code>address='0x3FF8'</code>这里的端口号要记得改为和设备一致的端口号。</li>
+</ul>
+</li>
+</ol>
+<a class="lightgallery" href="/imgs/Blog_EEG_Trigger_pic5.png" title="Stimuli Mark" data-thumbnail="/imgs/Blog_EEG_Trigger_pic5.png">
+        <img
+            class="lazyload"
+            src="/svg/loading.min.svg"
+            data-src="/imgs/Blog_EEG_Trigger_pic5.png"
+            data-srcset="/imgs/Blog_EEG_Trigger_pic5.png, /imgs/Blog_EEG_Trigger_pic5.png 1.5x, /imgs/Blog_EEG_Trigger_pic5.png 2x"
+            data-sizes="auto"
+            alt="Stimuli Mark" height="300" width="600" />
+    </a>
+<ol start="3">
+<li>
+<p>如下图，在<strong>code_7组件</strong>的 <strong>End Routine 选项卡</strong> 中输入如下代码：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">if key_resp.corr == 1:
+</span></span><span class="line"><span class="cl">    p_port.setData(88)
+</span></span><span class="line"><span class="cl">if key_resp.corr == 0:
+</span></span><span class="line"><span class="cl">    if key_resp.keys == None:
+</span></span><span class="line"><span class="cl">        p_port.setData(90)
+</span></span><span class="line"><span class="cl">    else:
+</span></span><span class="line"><span class="cl">        p_port.setData(99)
+</span></span></code></pre></td></tr></table>
+</div>
+</div><ul>
+<li>⚠️代码中，<code>key_resp</code>是键盘组件的名称，需要和你自己的名称改为一致的</li>
+<li>⚠️p_port是 <strong>Begin Experiment选项卡</strong> 中设置的名称，这两个地方要一致，名称随意改。</li>
+</ul>
+</li>
+</ol>
+<a class="lightgallery" href="/imgs/Blog_EEG_Trigger_pic6.png" title="Stimuli Mark" data-thumbnail="/imgs/Blog_EEG_Trigger_pic6.png">
+        <img
+            class="lazyload"
+            src="/svg/loading.min.svg"
+            data-src="/imgs/Blog_EEG_Trigger_pic6.png"
+            data-srcset="/imgs/Blog_EEG_Trigger_pic6.png, /imgs/Blog_EEG_Trigger_pic6.png 1.5x, /imgs/Blog_EEG_Trigger_pic6.png 2x"
+            data-sizes="auto"
+            alt="Stimuli Mark" height="300" width="600" />
+    </a>
+<hr>
+<h2 id="消除信道中的反应mark信息">消除信道中的反应Mark信息</h2>
+<blockquote>
+<p>在打入反应Mark后，如果不添加本部分代码，那只有第一个试次的Mark会全部出现，在后面的试次中就只会有反应Mark出现，因为反应Mark打入后，并没有停止信号的输入，它会持续占用通信通道，导致下一个试次的刺激Mark无法呈现。因此，需要在打入反应Mark后，再进行本部分代码的添加，让反应Mark出现一段时间后停止，避免一直占用通道。</p>
+</blockquote>
+<p><strong>实现目标：</strong></p>
+<p>在反应Mark出现后，消除反应Mark的通道占用。</p>
+<p><strong>操作方式：</strong></p>
+<ol>
+<li>在刺激呈现和反应的Routine后面，新增一个Routine，然后在新增的这个Routine放入一个Code组件，如图中的<strong>code_5组件</strong>，图中的图片组件是我实验设计所需，不是必须的。</li>
+</ol>
+<a class="lightgallery" href="/imgs/Blog_EEG_Trigger_pic7.png" title="Stimuli Mark" data-thumbnail="/imgs/Blog_EEG_Trigger_pic7.png">
+        <img
+            class="lazyload"
+            src="/svg/loading.min.svg"
+            data-src="/imgs/Blog_EEG_Trigger_pic7.png"
+            data-srcset="/imgs/Blog_EEG_Trigger_pic7.png, /imgs/Blog_EEG_Trigger_pic7.png 1.5x, /imgs/Blog_EEG_Trigger_pic7.png 2x"
+            data-sizes="auto"
+            alt="Stimuli Mark" height="300" width="600" />
+    </a>
+<ol start="2">
+<li>
+<p>打开Code组件的属性设置  &mdash;&gt;  切换到  <strong>Begin Routine选项卡</strong>  &mdash;&gt;  在里面填入如下代码</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">t_port</span> <span class="o">=</span> <span class="n">tThisFlipGlobal</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>这个表示获取当前的时间</p>
+<a class="lightgallery" href="/imgs/Blog_EEG_Trigger_pic7.png" title="Stimuli Mark" data-thumbnail="/imgs/Blog_EEG_Trigger_pic7.png">
+           <img
+               class="lazyload"
+               src="/svg/loading.min.svg"
+               data-src="/imgs/Blog_EEG_Trigger_pic7.png"
+               data-srcset="/imgs/Blog_EEG_Trigger_pic7.png, /imgs/Blog_EEG_Trigger_pic7.png 1.5x, /imgs/Blog_EEG_Trigger_pic7.png 2x"
+               data-sizes="auto"
+               alt="Stimuli Mark" height="300" width="600" />
+       </a>
+</li>
+<li>
+<p>切换到  <strong>Each Frame选项卡</strong>  &mdash;&gt;  在里面填入如下代码</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="k">if</span> <span class="n">tThisFlipGlobal</span> <span class="o">&gt;</span> <span class="n">t_port</span> <span class="o">+</span> <span class="mf">0.1</span> <span class="o">-</span> <span class="n">frameTolerance</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">    <span class="n">p_port</span><span class="o">.</span><span class="n">setData</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>这个代码表示，如果当前时间达到0.1秒，就执行<code>p_port.setData(0)</code>，即把p_port端口归零，设置停止数据。这里的p_port就是设置反应Mark的代码中设置的p_port，两个地方的名称要统一。代码中的<code>0.1</code>可以改为0.016及以上的时间，单位为秒。</p>
+</li>
+</ol>
+<hr>
+<p>到此，psychopy EEG实验打Mark全部完成。</p>
+<hr>
+</br>
+<h1 id="最后">最后</h1>
+<p>目前这种打Mark的方式，经过两次实验的测试，发现有较小几率会出现第一个Mark会掉的情况。直到现在还没有找到问题的根源。解决方法就是在实验开始的指导语的Routine中，给指导语的图片加一个parallel out组件，设置方式和刺激mark的设置方式一样，只是在<strong><ruby>数据<rt>Data</rt></ruby></strong>选项卡中，使用默认设置，即<code>1</code>，不放入我们的条件Mark进去，让这第一个Mark先出来。即使是这样，也不能完全保证第一个Mark丢失。很奇怪，经过反复测试，只丢第一个Mark，其他试次的Mark都不会丢。这个问题如果找到解决方法了，会在此更新。</p>
+</div><div class="post-footer" id="post-footer">
+    <div class="post-info">
+        <div class="post-info-line">
+            <div class="post-info-mod">
+                <span>Updated on 2022-11-11</span>
+            </div>
+            <div class="post-info-license"></div>
+        </div>
+        <div class="post-info-line">
+            <div class="post-info-md"></div>
+            <div class="post-info-share">
+                <span><a href="javascript:void(0);" title="Share on Twitter" data-sharer="twitter" data-url="https://bao-wei.github.io/psychopyeegtriggernotes/" data-title="Psychopy EEG Trigger Notes"><i class="fab fa-twitter fa-fw"></i></a><a href="javascript:void(0);" title="Share on Facebook" data-sharer="facebook" data-url="https://bao-wei.github.io/psychopyeegtriggernotes/"><i class="fab fa-facebook-square fa-fw"></i></a><a href="javascript:void(0);" title="Share on WhatsApp" data-sharer="whatsapp" data-url="https://bao-wei.github.io/psychopyeegtriggernotes/" data-title="Psychopy EEG Trigger Notes" data-web><i class="fab fa-whatsapp fa-fw"></i></a><a href="javascript:void(0);" title="Share on Line" data-sharer="line" data-url="https://bao-wei.github.io/psychopyeegtriggernotes/" data-title="Psychopy EEG Trigger Notes"><i data-svg-src="/lib/simple-icons/icons/line.min.svg"></i></a><a href="javascript:void(0);" title="Share on 微博" data-sharer="weibo" data-url="https://bao-wei.github.io/psychopyeegtriggernotes/" data-title="Psychopy EEG Trigger Notes"><i class="fab fa-weibo fa-fw"></i></a><a href="javascript:void(0);" title="Share on Myspace" data-sharer="myspace" data-url="https://bao-wei.github.io/psychopyeegtriggernotes/" data-title="Psychopy EEG Trigger Notes" data-description=""><i data-svg-src="/lib/simple-icons/icons/myspace.min.svg"></i></a><a href="javascript:void(0);" title="Share on Blogger" data-sharer="blogger" data-url="https://bao-wei.github.io/psychopyeegtriggernotes/" data-title="Psychopy EEG Trigger Notes" data-description=""><i class="fab fa-blogger fa-fw"></i></a><a href="javascript:void(0);" title="Share on Evernote" data-sharer="evernote" data-url="https://bao-wei.github.io/psychopyeegtriggernotes/" data-title="Psychopy EEG Trigger Notes"><i class="fab fa-evernote fa-fw"></i></a></span>
+            </div>
+        </div>
+    </div>
+
+    <div class="post-info-more">
+        <section class="post-tags"></section>
+        <section>
+            <span><a href="javascript:void(0);" onclick="window.history.back();">Back</a></span>&nbsp;|&nbsp;<span><a href="/">Home</a></span>
+        </section>
+    </div>
+
+    <div class="post-nav"><a href="/researcherofinterest/" class="prev" rel="prev" title="Researcher Pages"><i class="fas fa-angle-left fa-fw"></i>Researcher Pages</a>
+            <a href="/pacificrimpsychology/" class="next" rel="next" title="Working memory content guides attention: The effects of working memory capacity and state anxiety">Working memory content guides attention: The effects of working memory capacity and state anxiety<i class="fas fa-angle-right fa-fw"></i></a></div>
+</div>
+</article></div>
+            </main><footer class="footer">
+        <div class="footer-container"><div class="footer-line"><i class="far fa-copyright fa-fw"></i><span itemprop="copyrightYear">2020 - 2022</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="/" target="_blank">BaoWei</a></span>&nbsp;|&nbsp;<span class="license"><a rel="license external nofollow noopener noreffer" href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank">CC BY-NC 4.0</a></span></div>
+        </div>
+    </footer></div>
+
+        <div id="fixed-buttons"><a href="#" id="back-to-top" class="fixed-button" title="Back to Top">
+                <i class="fas fa-arrow-up fa-fw"></i>
+            </a><a href="#" id="view-comments" class="fixed-button" title="View Comments">
+                <i class="fas fa-comment fa-fw"></i>
+            </a>
+        </div><link rel="stylesheet" href="/lib/lightgallery/lightgallery.min.css"><link rel="stylesheet" href="/lib/katex/katex.min.css"><link rel="stylesheet" href="/lib/katex/copy-tex.min.css"><script type="text/javascript" src="/lib/smooth-scroll/smooth-scroll.min.js"></script><script type="text/javascript" src="/lib/lazysizes/lazysizes.min.js"></script><script type="text/javascript" src="/lib/twemoji/twemoji.min.js"></script><script type="text/javascript" src="/lib/lightgallery/lightgallery.min.js"></script><script type="text/javascript" src="/lib/lightgallery/lg-thumbnail.min.js"></script><script type="text/javascript" src="/lib/lightgallery/lg-zoom.min.js"></script><script type="text/javascript" src="/lib/clipboard/clipboard.min.js"></script><script type="text/javascript" src="/lib/sharer/sharer.min.js"></script><script type="text/javascript" src="/lib/katex/katex.min.js"></script><script type="text/javascript" src="/lib/katex/auto-render.min.js"></script><script type="text/javascript" src="/lib/katex/copy-tex.min.js"></script><script type="text/javascript" src="/lib/katex/mhchem.min.js"></script><script type="text/javascript">window.config={"code":{"copyTitle":"Copy to clipboard","maxShownLines":10},"comment":{},"lightGallery":{"actualSize":false,"exThumbImage":"data-thumbnail","hideBarsDelay":2000,"selector":".lightgallery","speed":400,"thumbContHeight":80,"thumbWidth":80,"thumbnail":true},"math":{"delimiters":[{"display":true,"left":"$$","right":"$$"},{"display":true,"left":"\\[","right":"\\]"},{"display":false,"left":"$","right":"$"},{"display":false,"left":"\\(","right":"\\)"}],"strict":false},"twemoji":true};</script><script type="text/javascript" src="/js/theme.min.js"></script></body>
+</html>

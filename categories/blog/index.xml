@@ -4,12 +4,19 @@
         <link>https://bao-wei.github.io/categories/blog/</link>
         <description>Blog - Category - Bao Wei | A Psychologyer</description>
         <generator>Hugo -- gohugo.io</generator><language>en</language><managingEditor>baoweibow@gmail.com (BaoWei)</managingEditor>
-            <webMaster>baoweibow@gmail.com (BaoWei)</webMaster><lastBuildDate>Sun, 17 Apr 2022 16:41:55 &#43;0800</lastBuildDate><atom:link href="https://bao-wei.github.io/categories/blog/" rel="self" type="application/rss+xml" /><item>
+            <webMaster>baoweibow@gmail.com (BaoWei)</webMaster><lastBuildDate>Fri, 11 Nov 2022 15:52:39 &#43;0800</lastBuildDate><atom:link href="https://bao-wei.github.io/categories/blog/" rel="self" type="application/rss+xml" /><item>
+    <title>Psychopy EEG Trigger Notes</title>
+    <link>https://bao-wei.github.io/psychopyeegtriggernotes/</link>
+    <pubDate>Fri, 11 Nov 2022 15:52:39 &#43;0800</pubDate>
+    <author>Author</author>
+    <guid>https://bao-wei.github.io/psychopyeegtriggernotes/</guid>
+    <description><![CDATA[本文介绍的是并行端口(Parallel Port)的打Mark方式，串行端口(Series Port)的方式大同小异，可参考：Sending triggers via]]></description>
+</item><item>
     <title>Psychopy online experiment programming notes</title>
     <link>https://bao-wei.github.io/programmingnotes/</link>
     <pubDate>Sun, 17 Apr 2022 16:41:55 &#43;0800</pubDate>
     <author>Author</author>
     <guid>https://bao-wei.github.io/programmingnotes/</guid>
-    <description><![CDATA[Tip 1: 达到正确率后通过练习 练习返回code组件代码设置 这一步只能单纯的实现，被试达到一定正确率后通过练习。按照上面链接中的设置，可以出现的效果]]></description>
+    <description><![CDATA[Online and Offline Experiment Tip 1: 达到正确率后通过练习 练习返回code组件代码设置 这一步只能单纯的实现，被试达到一定正确率后通过练习。按照上面链接中的设置，可以出]]></description>
 </item></channel>
 </rss>
