@@ -167,6 +167,8 @@ else:
 
 {{< admonition type=tip title="Tip 10: ⭐Selected rows是左开右闭" open=false >}}
 
+[Confused about indices used in selected rows](https://discourse.psychopy.org/t/confused-about-indices-used-in-selected-rows/2615)
+
 假如你想在`loop_1`选择**第1行到第8行**进行循环，`loop_2`选择**第9行到第16行**进行循环，`loop_3`选择**第17行到第24行**进行循环。
 
 那在添加loop后，需要分别在Selected rows部分填入：0:8、8:17、17:25
