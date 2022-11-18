@@ -368,20 +368,24 @@ else:
 
 {{< admonition type=tip title="Tip 4: ⭐Shuffle某一List后，需要 .copy() 才能赋值" open=false >}}
 
-<font color=#dbd8da>本Tip来源：wyh_task</font>
+*<font color=#dbd8da>本Tip来源：wyh_task</font>*
 
 *本Tip需要结合本部分的**Tip2**才能明白什么回事。*
 
-例如：加载了一个List：`list_major_4=[]`，然后在循环中对这个List写入数据：`list_major_4.append(major)`，想打乱这个List，并传给后面的程序使用。参考下面代码：
+例如：加载了一个List：`list_motivation_cue_4 = []`，然后在循环中对这个List写入数据：`list_motivation_cue_4.append(motivation)`，写入的数据就是**excel条件**中`motivation`这个变量，然后打乱这个List：`random.shuffle(list_motivation_cue_4)`，传给后面的程序使用。参考下面代码：
 
 ```python
 # 首先新建一个Routine，在这个Routine里面放入code组件，然后在Begin Experiment中写入下一句代码
-list_major_4=[] #创建空的List
+list_motivation_cue_4 = [] #创建空的List
+
 # 然后Begin Routine中写入下一句代码
-list_major_4.append(major)
+# 通过.append()循环写入motivation这个变量，是否打乱顺序写入取决于Loop属性中loopType是不是选择的random
+list_motivation_cue_4.append(motivation) 
+
 # 在End Routine中写入下面代码
 random.shuffle(list_motivation_cue_4) # 先打乱这个List
 list_motivation_4 = list_motivation_cue_4.copy() #然后通过 .copy() 将打乱的List赋值给其他变量，经测试直接用 ‘=’ 进行赋值无效
+
 # 最后给这个Routine加上一个Loop，并选择相应的条件excel。
 ```
 
