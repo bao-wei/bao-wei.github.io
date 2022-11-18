@@ -165,6 +165,22 @@ else:
 
 {{< /admonition >}}
 
+{{< admonition type=tip title="Tip 10: ⭐Selected rows是左开右闭" open=false >}}
+
+假如你想在`loop_1`选择**第1行到第8行**进行循环，`loop_2`选择**第9行到第16行**进行循环，`loop_3`选择**第17行到第24行**进行循环。
+
+那在添加loop后，需要分别在Selected rows部分填入：0:8、8:17、17:25
+
+⚠️可以看到，**python**的选择方式是`[`**左开  右闭**`)`的方式
+
+{{< image src="/imgs/selected_rows.png" alt="selected_rows" width="600" height="300">}}
+
+{{< /admonition >}}
+
+---
+
+</br>
+
 # Online Experiment 
 
 {{< admonition type=tip title="Tip 1: 在线运行错误可能原因" open=false >}}
@@ -262,6 +278,10 @@ else:
 
 {{< /admonition >}}
 
+---
+
+</br>
+
 # Offline Experiment
 
 {{< admonition type=tip title="Tip 1: ⭐按键平衡代码" open=false >}}
@@ -330,9 +350,11 @@ else:
 
 {{< /admonition >}}
 
-{{< admonition type=tip title="Tip 2: 单独提取某一列进行随机" open=false >}}
+{{< admonition type=tip title="Tip 2: ⭐单独提取某一列进行随机" open=false >}}
 
 [参考文章](https://discourse.psychopy.org/t/simultaneously-randomize-two-columns-in-conditions-file/22635/4)
+
+在帖子回答中用`ctrl+F`搜索 **Independent Randomisation** 这个 Demo，下载查看程序就知道怎么回事。
 
 {{< /admonition >}}
 
@@ -342,9 +364,30 @@ else:
 
 {{< /admonition >}}
 
-</br>
+{{< admonition type=tip title="Tip 4: ⭐Shuffle某一List后，需要 .copy() 才能赋值" open=false >}}
+
+<font color=#dbd8da>本Tip来源：wyh_task</font>
+
+*本Tip需要结合本部分的**Tip2**才能明白什么回事。*
+
+例如：加载了一个List：`list_major_4=[]`，然后在循环中对这个List写入数据：`list_major_4.append(major)`，想打乱这个List，并传给后面的程序使用。参考下面代码：
+
+```python
+# 首先新建一个Routine，在这个Routine里面放入code组件，然后在Begin Experiment中写入下一句代码
+list_major_4=[] #创建空的List
+# 然后Begin Routine中写入下一句代码
+list_major_4.append(major)
+# 在End Routine中写入下面代码
+random.shuffle(list_motivation_cue_4) # 先打乱这个List
+list_motivation_4 = list_motivation_cue_4.copy() #然后通过 .copy() 将打乱的List赋值给其他变量，经测试直接用 ‘=’ 进行赋值无效
+# 最后给这个Routine加上一个Loop，并选择相应的条件excel。
+```
+
+{{< /admonition >}}
 
 ---
+
+</br>
 
 
 
