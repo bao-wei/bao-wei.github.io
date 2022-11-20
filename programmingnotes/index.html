@@ -29,7 +29,7 @@
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https:\/\/bao-wei.github.io\/programmingnotes\/"
-        },"genre": "posts","wordcount":  6231 ,
+        },"genre": "posts","wordcount":  6320 ,
         "url": "https:\/\/bao-wei.github.io\/programmingnotes\/","datePublished": "2022-04-17T16:41:55+08:00","dateModified": "2022-11-20T00:00:00+00:00","publisher": {
             "@type": "Organization",
             "name": "Bao Wei"},"author": {
@@ -76,7 +76,7 @@
 <main class="main">
                 <div class="container"><article class="page single"><h1 class="single-title animated flipInX">Psychopy online experiment programming notes</h1><div class="post-meta">
             <div class="post-meta-line"><span class="post-author"><a href="/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>Bao Wei</a></span>&nbsp;<span class="post-category">included in <a href="/categories/blog/"><i class="far fa-folder fa-fw"></i>Blog</a></span></div>
-            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2022-04-17">2022-04-17</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;6231 words&nbsp;
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2022-04-17">2022-04-17</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;6320 words&nbsp;
                 <i class="far fa-clock fa-fw"></i>&nbsp;13 minutes&nbsp;</div>
         </div><div class="content" id="content"></br>
 <h1 id="online-and-offline-experiment">Online and Offline Experiment</h1>
@@ -280,7 +280,7 @@
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="mf">0.3</span><span class="o">+</span><span class="mf">0.2</span><span class="o">*</span><span class="n">random</span><span class="p">()</span> <span class="c1"># 或使用 random.random(),具体原因见下方解释</span>
+<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="mf">0.3</span><span class="o">+</span><span class="mf">0.2</span><span class="o">*</span><span class="n">random</span><span class="p">()</span> <span class="c1"># 在线下可能需要使用 random.random(),具体原因见下方解释</span>
 </span></span></code></pre></td></tr></table>
 </div>
 </div><a class="lightgallery" href="/imgs/random_stimuli.png" title="random_time" data-thumbnail="/imgs/random_stimuli.png">
@@ -292,7 +292,7 @@
             data-sizes="auto"
             alt="random_time" height="300" width="600" />
     </a>
-<p>⚠️**<font color=#dd001b>注意</font>**：如果程序里面由于其他需求，在程序里面插入了代码<code>import random</code>，那随机时间这里的代码需要改为<code>0.3+0.2*random.random()</code>。改成这样可以运行程序，但什么原因还没有去深究。了解原理后再更新。</p>
+<p>⚠️  <strong><font color=#dd001b>注意</font></strong>：如果<strong>线下程序</strong>里面由于其他需求，在程序里面插入了代码<code>import random</code>，那随机时间这里的代码需要改为<code>0.3+0.2*random.random()</code>。改成这样可以运行程序。<strong>线上程序</strong>如果没有引入多余的<strong><ruby>模块<rt>module</rt></ruby></strong>那就还是维持<code>random()</code>不变，如果引入了多余的模块，可能同样需要修改为<code>random.random()</code>。是什么原因导致这个问题还没有去深究。了解原理后再更新。</p>
 </div>
         </div>
     </div>

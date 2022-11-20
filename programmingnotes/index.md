@@ -135,12 +135,12 @@ if ((practice_key_resp_stroop.corr === 0)) {
 例如：随机300-500ms
 
 ```python
-0.3+0.2*random() # 或使用 random.random(),具体原因见下方解释
+0.3+0.2*random() # 在线下可能需要使用 random.random(),具体原因见下方解释
 ```
 
 {{< image src="/imgs/random_stimuli.png" alt="random_time" width="600" height="300">}}
 
-⚠️**<font color=#dd001b>注意</font>**：如果程序里面由于其他需求，在程序里面插入了代码`import random`，那随机时间这里的代码需要改为`0.3+0.2*random.random()`。改成这样可以运行程序，但什么原因还没有去深究。了解原理后再更新。
+⚠️  **<font color=#dd001b>注意</font>**：如果**线下程序**里面由于其他需求，在程序里面插入了代码`import random`，那随机时间这里的代码需要改为`0.3+0.2*random.random()`。改成这样可以运行程序。**线上程序**如果没有引入多余的[模块]^(module)那就还是维持`random()`不变，如果引入了多余的模块，可能同样需要修改为`random.random()`。是什么原因导致这个问题还没有去深究。了解原理后再更新。
 
 {{< /admonition >}}
 
