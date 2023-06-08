@@ -41,7 +41,7 @@ My research focus is on reasoning and decision-making, especially Dual-process t
 
 ### 2023
 
-Yunhong Wang, **Wei Bao***, Edward J. N. Stupple & Junlong Luo[:(far fa-regular fa-envelope):](https://www.researchgate.net/profile/Junlong-Luo). (2023). Robust intuition? Exploring the difference in the strength of intuitions from perspective of attentional bias, *Thinking & Reasoning*, https://doi.org/10.1080/13546783.2023.2220972
+Yunhong Wang, **Wei Bao***, Edward J. N. Stupple & Junlong Luo[:(far fa-regular fa-envelope):](https://www.researchgate.net/profile/Junlong-Luo). (2023). Robust intuition? Exploring the difference in the strength of intuitions from perspective of attentional bias. *Thinking & Reasoning*. https://doi.org/10.1080/13546783.2023.2220972
 
 ### 2022
 
