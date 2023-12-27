@@ -13,17 +13,7 @@
 
 ---
 
-I am studying at Shanghai Normal University and trying to graduate with a PhD.. 
-
 My research focus is on reasoning and decision-making, especially Dual-process theory. I work on the distinction between intuitive and deliberative reasoning processes, and their neural evidences. My recent research are focusing on the analytical component in intuition processing and its cognitive neural mechanisms. 
-
----
-
-2020-2023 Postgraduate student of PhD., Shanghai Normal University
-
-2017-2020 Master Degree, Guizhou Normal University
-
-2012-2016 Bachelor's Degree, Guizhou Normal University
 
 <br>
 
