@@ -1,7 +1,7 @@
 # Psychopy online experiment programming notes
 
 
-</br>
+
 
 > 科技的进步从来不是靠自我封闭，这也是为什么我将笔记保存在Github Pages上公开，而不是保存在个人网站或社交平台上。你可以从仓库里面直接保存原版的md文件，也可以随时访问这个页面。
 >
